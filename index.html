@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+</head>
+
+<body style="background-color: black;">
+    <img src="images/SpaceX-Logo.png">
+    <div id="latest-container"></div>
+</body>
+
+</html>
+
+<script>
+    const spacexUrl = "https://api.spacexdata.com/v4/launches/latest";
+    const corsEnableUrl = "https://noroffcors.herokuapp.com/" + spacexUrl;
+
+    const latestContainer = document.getElementById("latest-container");
+
+    async function fetchSpacex() {
+        try {
+            const response = await fetch(corsEnableUrl);
+            const spacex = await response.json();
+            createSpacexLaunches(spacex);
+        } catch (error) {
+            throw error;
+        }
+    }
+    fetchSpacex();
+
+    function createSpacexLaunches(spacex) {
+        let detailHtml = "";
+        console.log(spacex);
+        for(detail of spacex){
+            console.log(detail.details)
+         detailHtml += `<h2 style="color: white;">${detail.details}</h2> `;   
+        }
+
+        return latestContainer.innerHTML = detailHtml;
+        
+    }
+
+</script>
