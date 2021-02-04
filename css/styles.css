@@ -1,0 +1,227 @@
+/* Color Theme Swatches in Hex */
+.SpaceX-Moodboard--1-hex { color: #3868A6; }
+.SpaceX-Moodboard--2-hex { color: #8BB4D9; }
+.SpaceX-Moodboard--3-hex { color: #F28A2E; }
+.SpaceX-Moodboard--4-hex { color: #F2F2F2; }
+.SpaceX-Moodboard--5-hex { color: #0D0D0D; }
+
+/* Color Theme Swatches in RGBA */
+.SpaceX-Moodboard--1-rgba { color: rgba(56, 104, 166, 1); }
+.SpaceX-Moodboard--2-rgba { color: rgba(139, 180, 217, 1); }
+.SpaceX-Moodboard--3-rgba { color: rgba(242, 138, 46, 1); }
+.SpaceX-Moodboard--4-rgba { color: rgba(242, 242, 242, 1); }
+.SpaceX-Moodboard--5-rgba { color: rgba(13, 13, 13, 1); }
+
+/* Color Theme Swatches in HSLA */
+.SpaceX-Moodboard--1-hsla { color: hsla(213, 49, 43, 1); }
+.SpaceX-Moodboard--2-hsla { color: hsla(208, 50, 69, 1); }
+.SpaceX-Moodboard--3-hsla { color: hsla(28, 88, 56, 1); }
+.SpaceX-Moodboard--4-hsla { color: hsla(0, 0, 94, 1); }
+.SpaceX-Moodboard--5-hsla { color: hsla(0, 0, 5, 1); }
+
+@font-face {
+    font-family: 'exo2-bold';
+    src: url('../fonts/static/Exo2-SemiBold.eot?#iefix') format('embedded-opentype'),
+        /*        url('../fonts/Cabin-Bold.woff') format('woff'),*/
+        url('../fonts/static/Exo2-SemiBold.ttf') format('truetype'),
+        url('../fonts/static/Exo2-SemiBold#svgFontName') format('svg');
+}
+
+@font-face {
+    font-family: 'pt-sans-regular';
+    src: url('../fonts/static/PTSans-Regular.eot?#iefix') format('embedded-opentype'),
+        /*        url('../fonts/OpenSans-Regular.woff') format('woff'),*/
+        url('../fonts/static/PTSans-Regular.ttf') format('truetype'),
+        url('../fonts/static/PTSans-Regular#svgFontName') format('svg');
+}
+
+@font-face {
+    font-family: 'pt-sans-semibold';
+    src: url('../fonts/static/PTsans-Bold.eot?#iefix') format('embedded-opentype'),
+        /*        url('../fonts/OpenSans-Regular.woff') format('woff'),*/
+        url('../fonts/static/PTsans-Bold.ttf') format('truetype'),
+        url('../fonts/static/PTsans-Bold#svgFontName') format('svg');
+}
+
+body{
+    background-color: black;
+    font-family: pt-sans-regular , sans-serif;
+}
+
+/* Navigation menu */
+.toggle,
+[id^=drop] {
+    display: none;
+}
+
+nav {
+    margin: 0;
+    padding: 10px 0;
+    width: 100%;
+    max-width: 1920px;
+    min-width: 320px;
+}
+
+#logo {
+    width: 200px;
+    position: absolute;
+    top: 21px;
+    left: 10px;
+}
+
+nav:after {
+    display: table;
+    clear: both;
+    content: "";
+}
+
+nav ul {
+    position: relative;
+    z-index: 1;
+    float: right;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+nav a {
+    display: block;
+    padding: 0 15px;
+    margin: 0 2px;
+    color: #F2F2F2;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: pt-sans-semibold, sans-serif;
+    line-height: 60px;
+}
+
+nav a:hover {
+    color: #F28A2E;
+}
+
+nav ul li:hover > ul {
+    display: inherit;
+}
+
+
+li > label:after {
+    content: " \25be";
+}
+
+
+li > a:only-child:after {
+    content: '';
+}
+
+.active-menu {
+    color: rgba(242, 138, 46, .5);
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1024px) {
+
+    nav {
+        margin: 0;
+        padding: 5px 0;
+       
+    }
+
+    .toggle + a,
+    .menu {
+        display: none;
+    }
+
+    .toggle {
+        display: block;
+        padding: 0 20px;
+        border: none;
+        text-decoration: none;
+        font-size: 16px;
+        font-family: cabin-bold, sans-serif;
+        line-height: 40px;
+    }
+
+    #toogle_menu {
+        float: right;
+        color: #F2F2F2;
+        text-align: right;
+        line-height: 60px;
+        font-size: 18px;
+        padding: 0 10px;
+    }
+
+    #toogle_menu:hover {
+        color: #F28A2E;
+    }
+
+    .toggle:hover {
+        color: white;
+        cursor: pointer;
+    }
+    [id^=drop]:checked  .menu{
+        background-color: chartreuse !important;
+    }
+
+
+    [id^=drop]:checked + ul {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 80px;
+        background-color: #383838;
+        padding: 20px ;
+        width: 200px;
+        animation: disappear .5s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+
+    }
+    @keyframes disappear {
+        0% {
+            width: 0px;
+            
+        }
+        100% {
+            width: 200px;
+        }
+    }
+
+    nav ul li {
+        display: block;
+        width: 200px;
+    }
+
+
+    nav a {
+        padding: 0 20px;
+        font-size: 16px;
+        line-height: 40px;
+    }
+
+    nav a:hover {
+        color: #F28A2E;
+        border-radius: 0;
+    }
+
+    #logo {
+        top: 20px;
+        left: 8px;
+        width: 200px;
+    }
+}
