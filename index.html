@@ -2,22 +2,23 @@
 <html lang="en">
 
 <head>
-  <script src="https://kit.fontawesome.com/c7b2c2ac29.js" crossorigin="anonymous"></script>
-  <meta charset="utf-8">
-  <title>Home - SpaceX</title>
-  <meta name="author" content="SpaceX - Making history">
-  <meta name="description" content="SpaceX - Latest informations about upcomming launches">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <script src="https://kit.fontawesome.com/c7b2c2ac29.js" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <title>Home - SpaceX</title>
+    <meta name="author" content="SpaceX - Making history">
+    <meta name="description" content="SpaceX - Latest informations about upcomming launches">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
 </head>
 
 <header role="banner">
-    <nav role="navigation"> 
+    <nav role="navigation">
         <a href="index.html" title="Home - SpaceX">
             <img alt="SpaceX logo" id="logo" title="SpaceX" src="images/SpaceX-Logo.png"></a>
-
-        <label for="drop" id="toogle_menu" onclick="test()" class="toggle">&nbsp;<span class="fa fa-bars fa-lg">    
+        <label for="drop" id="toogle_menu" onclick="toogleMenuIcon(event)" class="toggle">
+            &nbsp;
+            <span id="menu-icon" class="fa fa-bars fa-lg">
             </span>
         </label> <input type="checkbox" id="drop" />
         <ul class="menu">
@@ -35,15 +36,31 @@
 
 </header>
 
-   
+<!-- FOOTER -->
+<footer role="contentinfo" id="footer">
+    <ul class="social-icons">
+        <li>
+            <a title="Follow us on Facebook" href="#">
+                <i class="fab fa-facebook fa-2x"></i>
+            </a>
+        </li>
+        <li>
+            <a title="Follow us on Facebook" href="#">
+                <i class="fab fa-instagram fa-2x"></i>
+            </a>
+        </li>
+        <li>
+            <a title="Follow us on Facebook" href="#">
+                <i class="fab fa-twitter fa-2x"></i>
+            </a>
+        </li>
+    </ul>
+    <p class="copyrights">&copy;2021 All rights reserved to <a href="index.html" title="SpaceX">spacex.com</a></p>
+    
+</footer>
+
+<script src="js/script.js" crossorigin="anonymous"></script>
 
 </body>
-<script>
-    function test(){
-        let menuIcon = document.getElementById("tooggle_menu");
-        menuIcon.classList.add("animation-btn");
-    }
-
-</script>
 
 </html>
