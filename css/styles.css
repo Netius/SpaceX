@@ -42,11 +42,66 @@
         url('../fonts/static/PTsans-Bold.ttf') format('truetype'),
         url('../fonts/static/PTsans-Bold#svgFontName') format('svg');
 }
+/*limited reset*/
+
+html,
+body,
+div,
+section,
+h1,
+h3,
+h2,
+article,
+aside,
+header,
+hgroup,
+footer,
+nav,
+blockquote,
+address,
+time,
+span,
+strong,
+img,
+ol,
+ul,
+li,
+figure,
+canvas,
+video,
+th,
+td,
+tr {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    font: inherit;
+}
+
+html5 display rule address,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
 
 body{
-    margin: 0;
     background-color: black;
     font-family: pt-sans-regular , sans-serif;
+    /* max-width: 1920px; */
+    margin: 0 auto;
 }
 
 /* Navigation menu */
@@ -56,11 +111,11 @@ body{
 }
 
 nav {
-    margin: 0;
     padding: 10px 0;
     width: 100%;
+    /* margin: 0 auto;
     max-width: 1920px;
-    min-width: 320px;
+    min-width: 320px;  */
 }
 
 #logo {
@@ -80,15 +135,12 @@ nav ul {
     position: relative;
     z-index: 1;
     float: right;
-    margin: 0;
-    padding: 0;
     list-style: none;
     font-size: 0;
 }
 
 nav ul li {
     display: inline-block;
-    margin: 0;
     text-transform: uppercase;
 }
 
@@ -125,18 +177,85 @@ li > a:only-child:after {
     color: rgba(242, 138, 46, .5);
 }
 
+/* HEADER */
+header{
+    min-height: calc(100vh - 250px);
+}
+
+.container-hero{
+    display: flex;
+    align-items: flex-end ;
+}
+.hero-text{
+    color: #F2F2F2;
+    margin: 1em 4em 6em;
+    /* margin-left: ; */
+}
+
+.hero-header{
+    font-size: 4em;
+    font-family: exo2-bold, sans-serif;
+    text-transform: uppercase;
+}
+.hero-date{
+    display: inline-block;
+    background-color: rgba(242, 138, 46, .9);
+    padding: 4px 5px;
+    font-size: 20px;
+}
+.hero-starship{
+    margin-top: .2em;
+    font-size: 3.5em;
+    font-family: pt-sans-regular , sans-serif;
+    letter-spacing: 1.5px;
+}
+.btn-standard{
+    font-family: pt-sans-regular, sans-serif;
+    color: #F2F2F2;
+    background-color: rgba(13, 13, 13, .5);
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding: 15px 30px;
+    border: 2px solid #F2F2F2;
+    display: inline-block;
+    margin-top: 4em;
+    text-decoration: none;
+}
+
+.btn-standard:hover{
+    background-color: rgba(242, 242, 242, 1);
+    color: #0D0D0D;
+}
+
+.main-hero-image{
+    width: 100%;
+    height: calc(100vh - 25vh);
+    min-height: 650px;
+    background-image: url(../images/Starlink21.jpg);
+    background-position: center bottom 70%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
 /* FOOTER  */
 #footer{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end ;
+    height: 250px;
     background-color: #3868A6;
-    padding: 3em 0;
+
 }
+
 .social-icons a{
     text-decoration: none;
 }
 
 .social-icons {
     text-align: center;
-    padding-left: 0;
+    padding-bottom: 2em;
 }
 .social-icons i:hover{
     color:  #F28A2E;
@@ -173,17 +292,11 @@ li > a:only-child:after {
 
 
 
-
-
-
-
-
+/* MEDIE QUERIE */
 @media (max-width: 1024px) {
-
     nav {
         margin: 0;
         padding: 5px 0;
-       
     }
 
     .toggle + a,
@@ -218,31 +331,24 @@ li > a:only-child:after {
         color: white;
         cursor: pointer;
     }
-    [id^=drop]:checked  .menu{
-        background-color: chartreuse !important;
-    }
-
 
     [id^=drop]:checked + ul {
         display: block;
         position: absolute;
         right: 0;
-        top: 60px;
+        top: 70px;
         background-color: #383838;
         padding: 20px ;
-        width: 200px;
         animation: disappear .5s;
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
-
     }
     @keyframes disappear {
         0% {
-            width: 0px;
-            
+            height: 0px;
         }
         100% {
-            width: 200px;
+            height: 140px;
         }
     }
 
