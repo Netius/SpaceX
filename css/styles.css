@@ -189,7 +189,19 @@ header{
 .hero-text{
     color: #F2F2F2;
     margin: 1em 4em 6em;
-    /* margin-left: ; */
+}
+
+.calender-text{
+    color: #F2F2F2;
+    margin: 1em 4em 6em;
+}
+
+.calender-hero{
+    display: flex;
+    align-items: center ;
+}
+.p-text{
+    font-size: 2em;
 }
 
 .hero-header{
@@ -236,6 +248,17 @@ header{
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+.calender-hero-image{
+    width: 100%;
+    height: calc(100vh - 10vh);
+    min-height: 800px;
+    /* background-image: url(../images/Calender-hero.jpg);
+    background-position: center bottom 10%;
+    background-size: cover;
+    background-repeat: no-repeat; */
+}
+
 
 
 

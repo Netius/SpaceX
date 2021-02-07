@@ -1,7 +1,7 @@
-    const spacexUrl = "https://api.spacexdata.com/v4/launches/latest";
+    const spacexUrl = "https://api.spacexdata.com/v4/launches/upcoming";
     const corsEnableUrl = "https://noroffcors.herokuapp.com/" + spacexUrl;
 
-    const latestContainer = document.getElementById("latest-container");
+    const calenderLaunches = document.getElementById("calendar-launches");
 
     async function fetchSpacex() {
         try {
@@ -15,17 +15,33 @@
     fetchSpacex();
 
     function createSpacexLaunches(spacex) {
+        spacex.sort(function(a,b){
+            // Turn your strings into dates, and then subtract them
+            // to get a value that is either negative, positive, or zero.
+            return new Date(a.date_local) - new Date(b.date_local);
+          });
+          
+       console.log(spacex);
+       
         let detailHtml = "";
-        console.log(spacex);
+        spacex.sort()
+        // console.log(spacex);
         for(let detail of spacex){
-            console.log(detail.details)
+            console.log(detail.date_local)
          detailHtml += `<h2 style="color: white;">${detail.details}</h2> `;   
         }
 
-        return latestContainer.innerHTML = detailHtml;
+        return calenderLaunches.innerHTML = detailHtml;
         
     }
 
+    
+    
+    
+    
+    
+    
+    
     // Toogle menu icon from burguer to X 
     let toogleIcon = true;
     function toogleMenuIcon(event){
