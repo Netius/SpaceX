@@ -193,13 +193,9 @@ header{
 
 .calender-text{
     color: #F2F2F2;
-    margin: 1em 4em 6em;
+    margin: 8em 1em 1em 4em;
 }
 
-.calender-hero{
-    display: flex;
-    align-items: center ;
-}
 .p-text{
     font-size: 2em;
 }
@@ -241,7 +237,7 @@ header{
 
 .main-hero-image{
     width: 100%;
-    height: calc(100vh - 25vh);
+    height: calc(100vh - 20vh);
     min-height: 650px;
     background-image: url(../images/Starlink21.jpg);
     background-position: center bottom 70%;
@@ -251,16 +247,49 @@ header{
 
 .calender-hero-image{
     width: 100%;
-    height: calc(100vh - 10vh);
-    min-height: 800px;
-    /* background-image: url(../images/Calender-hero.jpg);
-    background-position: center bottom 10%;
+    /* height: calc(100vh - 20vh); */
+    /* min-height: 650px; */
+    /* background-image: url(../images/Calender-hero.jpg); */
+    background-position: center bottom 80%;
     background-size: cover;
-    background-repeat: no-repeat; */
+    background-repeat: no-repeat;
+}
+.container-calender{
+    display: flex;
+    align-items: stretch;
+    padding: 4em 0;
 }
 
+#calendar-launches{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 5em 0;
+    color: #F2F2F2;
+}
 
-
+#calendar-launches li{
+   list-style: none;
+   margin-bottom: 10px;
+}
+.launch-date{
+    background-color: #F28A2E;
+    padding: 0 5px;
+    font-size: 20px;
+}
+.location-text{
+    font-size: 20px;
+}
+.spaceship-name{
+    font-family: pt-sans-semibold, sans-serif;
+    font-size: 30px;
+}
+.launches-container{
+    background-color: #ffffff26;
+    padding: 4em;
+    margin: 1em;
+}
+  
 
 /* FOOTER  */
 #footer{

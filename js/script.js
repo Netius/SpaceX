@@ -1,46 +1,62 @@
-    const spacexUrl = "https://api.spacexdata.com/v4/launches/upcoming";
-    const corsEnableUrl = "https://noroffcors.herokuapp.com/" + spacexUrl;
+    const corsEnableUrl = "https://noroffcors.herokuapp.com/";
+    const spacexUrl = corsEnableUrl + "https://api.spacexdata.com/v4/launches";
+    const spacexLaunchpads = corsEnableUrl + "https://api.spacexdata.com/v4/launchpads";
 
     const calenderLaunches = document.getElementById("calendar-launches");
 
     async function fetchSpacex() {
         try {
-            const response = await fetch(corsEnableUrl);
-            const spacex = await response.json();
-            createSpacexLaunches(spacex);
+            // API call for launches
+            const responseLaunches = await fetch(spacexUrl);
+            const launches = await responseLaunches.json();
+           
+            // Api call for Rockets
+            const responseLaunchpads = await fetch(spacexLaunchpads);
+            const launchpads = await responseLaunchpads.json();
+            
+            createSpacexLaunches(launches ,launchpads);
         } catch (error) {
             throw error;
         }
     }
     fetchSpacex();
 
-    function createSpacexLaunches(spacex) {
-        spacex.sort(function(a,b){
-            // Turn your strings into dates, and then subtract them
-            // to get a value that is either negative, positive, or zero.
-            return new Date(a.date_local) - new Date(b.date_local);
-          });
-          
-       console.log(spacex);
-       
-        let detailHtml = "";
-        spacex.sort()
-        // console.log(spacex);
-        for(let detail of spacex){
-            console.log(detail.date_local)
-         detailHtml += `<h2 style="color: white;">${detail.details}</h2> `;   
-        }
 
-        return calenderLaunches.innerHTML = detailHtml;
+    function createSpacexLaunches(spacex , launchpads) { 
+        sortDateLaunches(spacex);
+        let detailHtml = "";
+        let counter = 0;
         
+        for(let launch of spacex){
+            if(new Date(launch.date_local) > new Date() && (counter <= 2)){
+                const launchpad = launchpads.filter(element => element.id === launch.launchpad);
+               
+            
+                detailHtml += `
+                <div class="launches-container">
+                    <ul>
+                        <li class="spaceship-name"><h3>${launch.name}</h3></li>
+                        <li class="launch-date">${launch.date_local}</li>
+                        <li class="location-text"><i class="fas fa-map-marker-alt"></i> ${launchpad[0].locality}</li>
+                        <li class="location-text">${launchpad[0].region}</li>
+                    </ul>
+                    <a  class="btn-standard" title="Read more about upcoming launch" href="upcoming.html">
+                        Details
+                    </a>
+                </div>
+                 `;   
+                counter++;
+        }
+       }        
+        return calenderLaunches.innerHTML = detailHtml;     
     }
 
-    
-    
-    
-    
-    
-    
+    // Sorts array by date
+    function sortDateLaunches(array){
+        array.sort(function(a,b){
+            return new Date (a.date_local) - new Date(b.date_local);
+          });
+    }
     
     // Toogle menu icon from burguer to X 
     let toogleIcon = true;
