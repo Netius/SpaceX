@@ -40,8 +40,8 @@
                         <li class="location-text"><i class="fas fa-map-marker-alt"></i> ${launchpad[0].locality}</li>
                         <li class="location-text">${launchpad[0].region}</li>
                     </ul>
-                    <a  class="btn-standard" title="Read more about upcoming launch" href="upcoming.html">
-                        Details
+                    <a  class="btn-details" title="Read more about upcoming launch" href="upcoming.html">
+                        Read more <i class="fas fa-arrow-right link-arrow"></i>
                     </a>
                 </div>
                  `;   

@@ -12,8 +12,8 @@
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
 </head>
 
-<header role="banner">
-    <nav role="navigation">
+<header role="banner" >
+    <nav role="navigation" class="container-width">
         <a href="index.html" title="Home - SpaceX">
             <img alt="SpaceX logo" id="logo" title="SpaceX" src="images/SpaceX-Logo.png"></a>
         <label for="drop" id="toogle_menu" onclick="toogleMenuIcon(event)" class="toggle">
@@ -33,21 +33,23 @@
             </li>
         </ul>
     </nav>
-    <div class="container-hero main-hero-image">
-        <div class="hero-text">
-            <h1 class="hero-header">Upcoming launch</h1>
-            <h2 class="hero-starship">Starlink 21</h2>
-            <p class="hero-date">2021-03-01</p>
-            <div>
-                <!-- Bildet er tatt av <a href="https://pixabay.com/no/users/spacex-imagery-885857/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=693192">SpaceX-Imagery</a> fra <a href="https://pixabay.com/no/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=693192">Pixabay</a> -->
-                <a class="btn-standard" title="Read more about upcoming launch" href="upcoming.html">
-                    Read more
-                </a>
+    <div class="main-hero-image">
+        <div class="container-hero">
+            <div class="hero-text">
+                <h1 class="hero-header">Upcoming launch</h1>
+                <h2 class="hero-starship">Starlink 21</h2>
+                <p class="hero-date">2021-03-01</p>
+                <div>
+                    <!-- Bildet er tatt av <a href="https://pixabay.com/no/users/spacex-imagery-885857/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=693192">SpaceX-Imagery</a> fra <a href="https://pixabay.com/no/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=693192">Pixabay</a> -->
+                    <a class="btn-standard" title="Read more about upcoming launch" href="upcoming.html">
+                        Read more
+                    </a>
+                </div>
             </div>
-        </div>
+    </div>
     </div>
 </header>
-<section>
+<section class="container-width">
     <div class="container-calender">
         <div class="calender-hero-image">
             <div class="calender-text a">
@@ -56,6 +58,12 @@
                 </h2>
             </div>
             <div id="calendar-launches"></div>
+            <div style="text-align: center;">
+                <a class="btn-standard" title="Check out our calendar for full overview" href="calendar.html">
+                    Full overview
+                 </a>
+            </div>
+           
         </div>
     </div>
 </section>

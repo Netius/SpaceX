@@ -100,8 +100,6 @@ summary {
 body{
     background-color: black;
     font-family: pt-sans-regular , sans-serif;
-    /* max-width: 1920px; */
-    margin: 0 auto;
 }
 
 /* Navigation menu */
@@ -182,13 +180,11 @@ header{
     min-height: calc(100vh - 250px);
 }
 
-.container-hero{
-    display: flex;
-    align-items: flex-end ;
-}
 .hero-text{
     color: #F2F2F2;
     margin: 1em 4em 6em;
+    position: absolute;
+    bottom: 20px;
 }
 
 .calender-text{
@@ -245,6 +241,7 @@ header{
     background-repeat: no-repeat;
 }
 
+/* CALENDAR SECTIOn */
 .calender-hero-image{
     width: 100%;
     /* height: calc(100vh - 20vh); */
@@ -257,7 +254,8 @@ header{
 .container-calender{
     display: flex;
     align-items: stretch;
-    padding: 4em 0;
+    padding: 3em 0 7em 0;
+
 }
 
 #calendar-launches{
@@ -270,7 +268,7 @@ header{
 
 #calendar-launches li{
    list-style: none;
-   margin-bottom: 10px;
+   margin-bottom: 15px;
 }
 .launch-date{
     background-color: #F28A2E;
@@ -289,6 +287,38 @@ header{
     padding: 4em;
     margin: 1em;
 }
+.btn-details{
+    font-family: pt-sans-regular, sans-serif;
+    color: #F2F2F2;
+    font-size: 18px;
+    letter-spacing: 1px;
+    /* text-transform: uppercase; */
+    display: inline-block;
+    margin-top: 3em;
+}
+
+.btn-details:hover{
+    color: #F28A2E;
+}
+
+.link-arrow{
+    margin-left: 10px;
+}
+
+.container-width{
+    position: relative;
+    max-width: 1920px;
+    margin: 0 auto !important;
+}
+
+.container-hero{
+    position: relative;
+    height: calc(100vh - 20vh);
+    min-height: 650px;
+    max-width: 1920px;
+    margin: 0 auto; 
+} 
+
   
 
 /* FOOTER  */
