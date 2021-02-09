@@ -254,7 +254,7 @@ header{
 .container-calender{
     display: flex;
     align-items: stretch;
-    padding: 3em 0 7em 0;
+    padding: 2em 0 9em 0;
 
 }
 
@@ -317,8 +317,23 @@ header{
     min-height: 650px;
     max-width: 1920px;
     margin: 0 auto; 
-} 
+}
 
+/* ABOUT SECTION */
+.about-hero{
+    width: 100%;   
+    min-height: 650px;
+    background-image: url(../images/about-spacex.jpg);
+    background-position: center bottom 10%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.about-text{
+    color: #F2F2F2;
+    margin: 1em 4em 6em;
+    position: absolute;
+    top:6em;
+}
   
 
 /* FOOTER  */
