@@ -176,7 +176,7 @@ li > a:only-child:after {
 }
 
 /* HEADER */
-header{
+.header{
     min-height: calc(100vh - 250px);
 }
 
@@ -233,8 +233,7 @@ header{
 
 .main-hero-image{
     width: 100%;
-    height: calc(100vh - 20vh);
-    min-height: 650px;
+    max-height: 900px;
     background-image: url(../images/Starlink21.jpg);
     background-position: center bottom 70%;
     background-size: cover;
@@ -244,18 +243,12 @@ header{
 /* CALENDAR SECTIOn */
 .calender-hero-image{
     width: 100%;
-    /* height: calc(100vh - 20vh); */
-    /* min-height: 650px; */
-    /* background-image: url(../images/Calender-hero.jpg); */
-    background-position: center bottom 80%;
-    background-size: cover;
-    background-repeat: no-repeat;
+   
 }
 .container-calender{
     display: flex;
     align-items: stretch;
     padding: 2em 0 9em 0;
-
 }
 
 #calendar-launches{
@@ -314,7 +307,7 @@ header{
 .container-hero{
     position: relative;
     height: calc(100vh - 20vh);
-    min-height: 650px;
+    max-height: 750px;
     max-width: 1920px;
     margin: 0 auto; 
 }
@@ -322,9 +315,8 @@ header{
 /* ABOUT SECTION */
 .about-hero{
     width: 100%;   
-    min-height: 650px;
     background-image: url(../images/about-spacex.jpg);
-    background-position: center bottom 10%;
+    background-position: center bottom 50%;
     background-size: cover;
     background-repeat: no-repeat;
 }

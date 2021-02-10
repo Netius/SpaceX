@@ -31,7 +31,6 @@
             if(new Date(launch.date_local) > new Date() && (counter <= 2)){
                 const launchpad = launchpads.filter(element => element.id === launch.launchpad);
                
-            
                 detailHtml += `
                 <div class="launches-container">
                     <ul>
@@ -40,7 +39,7 @@
                         <li class="location-text"><i class="fas fa-map-marker-alt"></i> ${launchpad[0].locality}</li>
                         <li class="location-text">${launchpad[0].region}</li>
                     </ul>
-                    <a  class="btn-details" title="Read more about upcoming launch" href="upcoming.html">
+                    <a  class="btn-details" title="Read more about upcoming launch" href="upcoming.html?${launch.id}">
                         Read more <i class="fas fa-arrow-right link-arrow"></i>
                     </a>
                 </div>
