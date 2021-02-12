@@ -152,6 +152,14 @@ nav a {
     font-family: pt-sans-semibold, sans-serif;
     line-height: 60px;
 }
+.links{
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+.links:hover{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
 
 nav a:hover {
     color: #F28A2E;
@@ -182,7 +190,7 @@ li > a:only-child:after {
 
 .hero-text{
     color: #F2F2F2;
-    margin: 1em 4em 6em;
+    margin: 1em 4em 1em;
     position: absolute;
     bottom: 20px;
 }
@@ -217,23 +225,30 @@ li > a:only-child:after {
     font-family: pt-sans-regular, sans-serif;
     color: #F2F2F2;
     background-color: rgba(13, 13, 13, .5);
-    font-size: 18px;
+    font-size: 20px;
     letter-spacing: 1px;
     padding: 15px 30px;
     border: 2px solid #F2F2F2;
     display: inline-block;
     margin-top: 4em;
     text-decoration: none;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
 }
 
 .btn-standard:hover{
     background-color: rgba(242, 242, 242, 1);
     color: #0D0D0D;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .main-hero-image{
     width: 100%;
+    height: calc(100vh - 10vh);
     max-height: 900px;
+    max-width: 1920px;
+    margin: 0 auto;
     background-image: url(../images/Starlink21.jpg);
     background-position: center bottom 70%;
     background-size: cover;
@@ -253,7 +268,7 @@ li > a:only-child:after {
 
 #calendar-launches{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     padding: 5em 0;
     color: #F2F2F2;
@@ -276,22 +291,27 @@ li > a:only-child:after {
     font-size: 30px;
 }
 .launches-container{
-    background-color: #ffffff26;
+    background-color: #4D4D4D;
     padding: 4em;
     margin: 1em;
+    border-radius: 15px;
 }
 .btn-details{
     font-family: pt-sans-regular, sans-serif;
     color: #F2F2F2;
-    font-size: 18px;
+    font-size: 20px;
     letter-spacing: 1px;
-    /* text-transform: uppercase; */
     display: inline-block;
     margin-top: 3em;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    
 }
 
 .btn-details:hover{
     color: #F28A2E;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .link-arrow{
@@ -314,9 +334,12 @@ li > a:only-child:after {
 
 /* ABOUT SECTION */
 .about-hero{
-    width: 100%;   
+    max-width: 1920px;   
+    margin: 0 auto;
+    height: calc(100vh - 10vh);
+    max-height: 800px;
     background-image: url(../images/about-spacex.jpg);
-    background-position: center bottom 50%;
+    background-position: center bottom 80%;
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -334,7 +357,7 @@ li > a:only-child:after {
     justify-content: center;
     align-items: flex-end ;
     height: 250px;
-    background-color: #3868A6;
+    /* background-color: #3868A6; */
 
 }
 
@@ -434,10 +457,10 @@ li > a:only-child:after {
     }
     @keyframes disappear {
         0% {
-            height: 0px;
+            width: 0px;
         }
         100% {
-            height: 140px;
+            width: 200px;
         }
     }
 
