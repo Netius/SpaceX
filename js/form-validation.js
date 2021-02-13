@@ -12,10 +12,14 @@ const email = document.querySelector("#email");
 const emailError = document.querySelector("#emailError");
 let emailHasError = false;
 
+const thanksMsg = document.querySelector("#thanks-message");
+const paragraphHero = document.querySelector("#hero-contact-p");
 
 form.addEventListener("submit", validateForm);
 
 function validateForm() {
+	event.preventDefault();
+
 	// Checking if name is at least 5 char
 	const nameValue = name.value;
 
@@ -52,20 +56,16 @@ function validateForm() {
 		emailHasError = true;
 	}
 
-	// decide whether to display the submitted message
+	// Decide whether to display the submitted message
 	if (
 		nameHasError === false &&
 		messageHasError === false &&
 		emailHasError === false
 	) {
-		event.preventDefault();
-		console.log("ok");
 		form.style.display = "none";
-
-		// TODO WRITE A THANKS MESSAGE
-
-
-}
+		paragraphHero.style.display="none";
+		thanksMsg.style.display ="block";
+	}
 }
 // Checking character length for inputs
 function validateLength(value, lengthToCheck) {

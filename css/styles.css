@@ -519,15 +519,28 @@ fieldset {
 
 .error {
     display: none;
-    color: rgb(185, 0, 0);
+    color: rgb(246, 90, 90);
     font-size: 16px;
     text-align: left;
 }
 
-
-
-
-
+#thanks-message{
+    display: none;
+    text-align: center;
+    padding: 5em 0;
+    margin: 4em auto;
+    max-width: 650px;
+    background-color:#4D4D4D ;
+    color: #F2F2F2;
+}
+#thanks-message h2{
+    font-size: 2em;
+    font-family:  pt-sans-semibold , sans-serif;
+}
+#thanks-message p{
+    font-size: 24px;
+    margin-bottom: 2em;
+}
 
 /* MEDIE QUERIE */
 @media (max-width: 1024px) {
