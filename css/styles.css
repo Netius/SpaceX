@@ -542,6 +542,25 @@ fieldset {
     margin-bottom: 2em;
 }
 
+
+/* ABOUT PAGE */
+.container-about{
+    /* margin: 0em 1em 1em 1em; */
+    background-color: #181818;
+    padding: 2em 0 4em 0;
+    text-align: center;
+}
+.about-hero-image{
+    width: 100%;
+    height: 350px;
+    max-width: 1920px;
+    margin: 0 auto;
+    background-image: url(../images/about-spacex.jpg);
+    background-position: center bottom 70%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 /* MEDIE QUERIE */
 @media (max-width: 1024px) {
     nav {
