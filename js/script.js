@@ -30,12 +30,14 @@
         for(let launch of spacex){
             if(new Date(launch.date_local) > new Date() && (counter <= 2)){
                 const launchpad = launchpads.filter(element => element.id === launch.launchpad);
+                
+                let formatedDate = formatDate(launch.date_local);
                
                 detailHtml += `
                 <div class="launches-container">
                     <ul>
                         <li class="spaceship-name"><h3>${launch.name}</h3></li>
-                        <li class="launch-date">${launch.date_local}</li>
+                        <li class="launch-date">${formatedDate}</li>
                         <li class="location-text"><i class="fas fa-map-marker-alt"></i> ${launchpad[0].locality}</li>
                         <li class="location-text">${launchpad[0].region}</li>
                     </ul>
@@ -55,6 +57,28 @@
         array.sort(function(a,b){
             return new Date (a.date_local) - new Date(b.date_local);
           });
+    }
+    // Format date and return
+    function formatDate(date){
+        var month = new Array();
+            month[0] = "Jan";
+            month[1] = "Feb";
+            month[2] = "Mar";
+            month[3] = "Apr";
+            month[4] = "May";
+            month[5] = "Jun";
+            month[6] = "Jul";
+            month[7] = "Aug";
+            month[8] = "Sep";
+            month[9] = "Oct";
+            month[10] = "Nov";
+            month[11] = "Dec";
+
+        const launchDate = new Date(date);
+        let formatedDate = launchDate.getUTCDate() + " " + 
+                            month[launchDate.getMonth()] + ". " + 
+                            launchDate.getFullYear();
+       return formatedDate;
     }
     
     // Toogle menu icon from burguer to X 
