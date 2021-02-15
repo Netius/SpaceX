@@ -360,6 +360,50 @@ li > a:only-child:after {
     position: absolute;
     top:6em;
 }
+.about-subhead{
+    font-size: 3em;
+    letter-spacing: 1px;
+    color: #F2F2F2;
+    font-family: 'pt-sans-semibold', sans-serif;
+}
+.subhead-container{
+    margin: 3em 4em 0 6em;
+    padding: 3em 0;
+    display: flex;
+    justify-content: space-around;
+
+
+}
+.subhead-container p{
+    color: #F2F2F2;
+    font-size: 19px;
+    
+}
+.bg-container{
+    background-color: #181818;
+    padding: 3em 0;
+    margin: 3em 0;
+    
+
+}
+.col{
+    flex:1;
+    margin: 1em;
+}
+.flex-grid-thirds{
+    width: 32%;
+    margin: 1em;
+    text-align: right;
+}
+.fabric-image{
+    width: 100%;
+}
+
+.musk-image{
+    width: 100%;
+    max-width: 350px;
+    text-align: right;
+}
   
 
 /* FOOTER  */
@@ -545,7 +589,6 @@ fieldset {
 
 /* ABOUT PAGE */
 .container-about{
-    /* margin: 0em 1em 1em 1em; */
     background-color: #181818;
     padding: 2em 0 4em 0;
     text-align: center;
