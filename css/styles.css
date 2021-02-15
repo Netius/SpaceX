@@ -265,6 +265,24 @@ li > a:only-child:after {
 }
 
 /* CALENDAR SECTIOn */
+.loader-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 6em;
+    display: none;
+}
+.loader {
+    border: 11px solid #F2F2F2; 
+    border-top: 11px solid #F28A2E; /* Blue */
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    animation: spin 2s linear infinite;
+  }
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(-360deg); }
+  }
 .calender-hero-image{
     width: 100%;
    
@@ -403,6 +421,10 @@ li > a:only-child:after {
     width: 100%;
     max-width: 350px;
     text-align: right;
+    
+}
+.col.fabric-image{
+    align-self: center;
 }
   
 
@@ -604,6 +626,8 @@ fieldset {
     background-repeat: no-repeat;
 }
 
+
+
 /* MEDIE QUERIE */
 @media (max-width: 1024px) {
     nav {
@@ -686,4 +710,39 @@ fieldset {
         left: 8px;
         width: 200px;
     }
+
+    /* ABOUT PAGE */
+    .subhead-container{
+        margin: 1em;
+        padding: 1em 0;
+        flex-direction: column;
+    }
+    .reverse-col{
+        flex-direction: column-reverse;
+    }
+    .subhead-container p{
+        font-size: 16px;
+    }
+    .about-subhead{
+        font-size: 2em;
+    }
+    .hero-header{
+        font-size: 2.5em;
+    }
+    .container-about {
+        padding: 1em 0 2em 0;
+    }
+    .bg-container{
+        margin: 0;
+        padding: 1em 0;
+    }
+    /* Contact page */
+    .contact-text{
+        font-size: 22px;
+        margin-bottom: 2em;
+    }
+    .col-contact{
+        margin: 0 1em;
+    }
+
 }
