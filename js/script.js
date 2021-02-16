@@ -60,7 +60,7 @@
                                 <h2 class="hero-starship">${launch.name}</h2>
                                 <p class="hero-date">${formatedDate}</p>
                                 <div>
-                                    <a class="btn-standard" title="Read more about upcoming launch" href="upcoming.html?${launch.id}">
+                                    <a class="btn-standard" title="Read more about upcoming launch" href="upcoming.html?id=${launch.id}">
                                         Read more
                                     </a>
                                 </div>
@@ -80,7 +80,7 @@
                         <li class="location-text"><i class="adress-icon fas fa-map-marker-alt"></i> ${launchpad[0].locality} - ${launchpad[0].region}</li>
                         <li class="location-text"></li>
                     </ul>
-                    <a  class="btn-details" title="Read more about upcoming launch" href="upcoming.html?${launch.id}">
+                    <a  class="btn-details" title="Read more about upcoming launch" href="upcoming.html?id=${launch.id}">
                         Read more <i class="fas fa-arrow-right link-arrow"></i>
                     </a>
                 </div>
