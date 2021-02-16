@@ -627,6 +627,19 @@ fieldset {
     background-repeat: no-repeat;
 }
 
+/* UPCOMING PAGE */
+
+.upcoming-hero-image{
+    width: 100%;
+    height: 350px;
+    max-width: 1920px;
+    margin: 0 auto;
+    background-image: url(../images/Starlink21.jpg);
+    background-position: center bottom 90%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 
 
 /* MEDIE QUERIE */
