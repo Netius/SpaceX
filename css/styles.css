@@ -326,6 +326,13 @@ li > a:only-child:after {
     border-radius: 15px;
     width: 20%;
 }
+
+.rocket-icon{
+    color: #8BB4D9;
+}
+.adress-icon{
+    color: #c50000;
+}
 .btn-details{
     font-family: pt-sans-regular, sans-serif;
     color: #F2F2F2;
