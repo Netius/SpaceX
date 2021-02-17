@@ -53,7 +53,6 @@
                 // Show upcoming launch i header
                 if (counter === 0){
                     upcomingHtml = `
-                    <div class="main-hero-image">
                         <div class="container-hero">
                             <div class="hero-text">
                                 <h1 class="hero-header">Upcoming launch</h1>
@@ -66,7 +65,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
                     `;
                     upcomingLaunch.innerHTML = upcomingHtml; 
                 }
