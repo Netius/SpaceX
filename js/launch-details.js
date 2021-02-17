@@ -39,26 +39,23 @@ fetchSpacex();
 function createLaunchesDetails(launch ,launchpads, rockets){
     const launchpad = launchpads.filter(element => element.id === launch.launchpad);
     const rocket = rockets.filter(element => element.id === launch.rocket);
-
-    console.log(launchpad);
-    console.log(rocket);
+    console.log("LAUNCH" , launch);
+    console.log("PAD" , launchpad);
+    console.log("Rocket" , rocket);
    
     let formatedDate = formatDate(launch.date_local);
     
     let detailHtml= "";
-    detailHtml += `
-                <div style="color: white;">
-                    <ul>
-                        <li class="spaceship-name"><h3>${launch.name}</h3></li>
+        detailHtml += `
+                    <h2 class="spaceship-name">${launch.name}</h2>
+                    <ul class="details-list">
                         <li class="launch-date">${formatedDate}</li>
-                        <li class="location-text"><i class="rocket-icon fas fa-rocket"></i> ${rocket[0].name}</li>
                         <li class="location-text"><i class="adress-icon fas fa-map-marker-alt"></i> ${launchpad[0].locality} - ${launchpad[0].region}</li>
+                        <li class="location-text">${launchpad[0].details}</li>
+                        <li class="location-text"><i class="rocket-icon fas fa-rocket"></i> ${rocket[0].name}</li>
+                        <li class="location-text">${rocket[0].description}</li>
                         <li class="location-text"></li>
                     </ul>
-                    <a  class="btn-details" title="Read more about upcoming launch" href="upcoming.html?id=${launch.id}">
-                        Read more <i class="fas fa-arrow-right link-arrow"></i>
-                    </a>
-                </div>
                  `; 
                  
     detailsLaunch.innerHTML = detailHtml;          

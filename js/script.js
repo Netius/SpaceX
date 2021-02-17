@@ -74,9 +74,8 @@
                     <ul>
                         <li class="spaceship-name"><h3>${launch.name}</h3></li>
                         <li class="launch-date">${formatedDate}</li>
-                        <li class="location-text"><i class="rocket-icon fas fa-rocket"></i> ${rocket[0].name}</li>
                         <li class="location-text"><i class="adress-icon fas fa-map-marker-alt"></i> ${launchpad[0].locality} - ${launchpad[0].region}</li>
-                        <li class="location-text"></li>
+                        <li class="location-text"><i class="rocket-icon fas fa-rocket"></i> ${rocket[0].name}</li>
                     </ul>
                     <a  class="btn-details" title="Read more about upcoming launch" href="upcoming.html?id=${launch.id}">
                         Read more <i class="fas fa-arrow-right link-arrow"></i>
