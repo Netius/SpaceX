@@ -1,6 +1,12 @@
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
-const launchId = params.get("id");
+
+
+let launchId = params.get("id");
+// Checking just if is accessing upcoming.html direct
+if(!launchId){
+    launchId = "600f9a718f798e2a4d5f979d";
+}
 
 const corsEnableUrl = "https://noroffcors.herokuapp.com/";
 const spacexUrl = corsEnableUrl + "https://api.spacexdata.com/v4/launches/" + launchId;
@@ -47,15 +53,24 @@ function createLaunchesDetails(launch ,launchpads, rockets){
     
     let detailHtml= "";
         detailHtml += `
-                    <h2 class="spaceship-name">${launch.name}</h2>
-                    <ul class="details-list">
-                        <li class="launch-date">${formatedDate}</li>
-                        <li class="location-text"><i class="adress-icon fas fa-map-marker-alt"></i> ${launchpad[0].locality} - ${launchpad[0].region}</li>
-                        <li class="location-text">${launchpad[0].details}</li>
-                        <li class="location-text"><i class="rocket-icon fas fa-rocket"></i> ${rocket[0].name}</li>
-                        <li class="location-text">${rocket[0].description}</li>
-                        <li class="location-text"></li>
-                    </ul>
+                <div class="subhead-container">
+                    <div class="col">
+                        <h2 class="spaceship-name">${launch.name}</h2>
+                        <p class="launch-date">${formatedDate}</p>
+                        
+                        <h3 class="spaceship-name"><i class="adress-icon fas fa-map-marker-alt"></i> ${launchpad[0].locality} - ${launchpad[0].region}</h3>
+                        <p class="details-text">${launchpad[0].details}</p>
+                    
+                        <h3 class="spaceship-name"><i class="rocket-icon fas fa-rocket"></i> ${rocket[0].name}</h3>
+                        <p class="details-text">${rocket[0].description}</p>
+                    </div> 
+                    <div class="col details-image">
+                        <figure>
+                            <img src=${rocket[0].flickr_images} alt=${rocket[0].name} title=${rocket[0].name} width="100%">
+                            <figcaption class="figcaption-text">${rocket[0].name}</figcaption>
+                        </figure>
+                    <div>
+                </div>
                  `; 
                  
     detailsLaunch.innerHTML = detailHtml;          

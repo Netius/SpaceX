@@ -646,7 +646,12 @@ fieldset {
     background-size: cover;
     background-repeat: no-repeat;
 }
-
+.details-image{
+   align-self: center;
+}
+.figcaption-text{
+    text-align: right;
+}
 
 
 /* MEDIE QUERIE */
