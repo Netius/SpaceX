@@ -39,14 +39,19 @@
         let detailHtml = "";
         let upcomingHtml = "";
         let counter = 0;
+        let firstRocket ="";
 
         for(let launch of spacex){
             if(new Date(launch.date_local) > new Date() && (counter <= 2)){
                 const launchpad = launchpads.filter(element => element.id === launch.launchpad);
                 const rocket = rockets.filter(element => element.id === launch.rocket);
 
-                console.log(launchpad[0].id);
-                console.log(rocket[0].id);
+                if (firstRocket === launch.rocket){
+                    console.log("LIKT");
+                    continue;
+                }
+                
+                firstRocket = launch.rocket;
                 
                 let formatedDate = formatDate(launch.date_local);
                 
@@ -81,7 +86,8 @@
                         Read more <i class="fas fa-arrow-right link-arrow"></i>
                     </a>
                 </div>
-                 `;   
+                 `;
+                 console.log(counter);   
                 counter++;
         }
        }        
