@@ -51,22 +51,29 @@ function createLaunchesDetails(launch ,launchpads, rockets){
    
     let formatedDate = formatDate(launch.date_local);
     
+    let rocketText = formatText(rocket[0].description);
+    let launchPadDetails = formatText(launchpad[0].details);
+
     let detailHtml= "";
         detailHtml += `
                 <div class="subhead-container">
-                    <div class="col">
+                    <div class="col"> 
                         <h2 class="spaceship-name">${launch.name}</h2>
-                        <p class="launch-date">${formatedDate}</p>
+                        <span class="local-time"> Local Time</span><p class="launch-date pd-bottom">${formatedDate}</p>
                         
-                        <h3 class="spaceship-name"><i class="adress-icon fas fa-map-marker-alt"></i> ${launchpad[0].locality} - ${launchpad[0].region}</h3>
-                        <p class="details-text">${launchpad[0].details}</p>
+                        <h2 class="spaceship-name"><i class="adress-icon fas fa-map-marker-alt"></i> ${launchpad[0].locality} - ${launchpad[0].region}</h2>
+                        <p class="details-text pd-bottom">${launchPadDetails}</p>
                     
-                        <h3 class="spaceship-name"><i class="rocket-icon fas fa-rocket"></i> ${rocket[0].name}</h3>
-                        <p class="details-text">${rocket[0].description}</p>
+                        <h2 class="spaceship-name"><i class="rocket-icon fas fa-rocket"></i> ${rocket[0].name}</h2>
+                        <p class="details-text pd-bottom">${rocketText}</p>
                     </div> 
-                    <div class="col details-image">
+                    <div class="flex-thirds details-image">
                         <figure>
                             <img src=${rocket[0].flickr_images} alt=${rocket[0].name} title=${rocket[0].name} width="100%">
+                            <figcaption class="figcaption-text">${rocket[0].name}</figcaption>
+                        </figure>
+                        <figure>
+                            <img src=${rocket[0].flickr_images[1]} alt=${rocket[0].name} title=${rocket[0].name} width="100%">
                             <figcaption class="figcaption-text">${rocket[0].name}</figcaption>
                         </figure>
                     <div>
@@ -75,4 +82,10 @@ function createLaunchesDetails(launch ,launchpads, rockets){
                  
     detailsLaunch.innerHTML = detailHtml;          
 
+}
+
+function formatText(text){
+    var formatedText = text.split('. ').join('. <br/>');
+    console.log(formatedText);
+    return formatedText;
 }

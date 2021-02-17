@@ -222,7 +222,8 @@ li > a:only-child:after {
     display: inline-block;
     background-color: rgba(242, 138, 46, .9);
     padding: 5px 15px;
-    font-size: 20px;
+    font-size: 22px;
+    font-family: pt-sans-semibold, sans-serif;
 }
 .hero-starship{
     margin-top: .2em;
@@ -262,6 +263,12 @@ li > a:only-child:after {
     background-position: center bottom 70%;
     background-size: cover;
     background-repeat: no-repeat;
+}
+.local-time{
+    background-color: #181818;
+    font-size: 22px;
+    color:white;
+    padding: 15px 20px;
 }
 
 /* CALENDAR SECTIOn */
@@ -324,7 +331,7 @@ li > a:only-child:after {
     padding: 3em;
     margin: 1em;
     border-radius: 15px;
-    width: 250px;
+    width: 300px;
 }
 
 .rocket-icon{
@@ -651,6 +658,14 @@ fieldset {
 }
 .figcaption-text{
     text-align: right;
+    margin-bottom: 1em;
+}
+.pd-bottom{
+    margin-bottom: 4em;
+}
+.flex-thirds{
+    width: 35%;
+    margin: 1em;
 }
 
 
@@ -769,6 +784,9 @@ fieldset {
     }
     .col-contact{
         margin: 0 1em;
+    }
+    .flex-thirds{
+        width: 100%;
     }
 
 }
