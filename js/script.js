@@ -45,8 +45,8 @@
                 const launchpad = launchpads.filter(element => element.id === launch.launchpad);
                 const rocket = rockets.filter(element => element.id === launch.rocket);
 
-                console.log(rocket);
-                console.log(rocket[0].flickr_images[0]);
+                console.log(launchpad[0].id);
+                console.log(rocket[0].id);
                 
                 let formatedDate = formatDate(launch.date_local);
                 
