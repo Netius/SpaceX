@@ -324,7 +324,7 @@ li > a:only-child:after {
     padding: 3em;
     margin: 1em;
     border-radius: 15px;
-    width: 18%;
+    width: 250px;
 }
 
 .rocket-icon{
