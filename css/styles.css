@@ -296,14 +296,22 @@ li > a:only-child:after {
     100% { transform: rotate(-360deg); }
   }
 .calender-hero-image{
+    width: 100%;   
+}
+.cl-image{
     width: 100%;
-   
+    margin: 0 auto;
+    background-image: url(../images/calender-spacex.jpg);
+    background-position: center top 80%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
 }
 .container-calender{
     display: flex;
     align-items: stretch;
     padding: 2em 0 9em 0;
-    background-color: #181818;
+    /* background-color: #181818; */
 }
 
 #calendar-launches{
@@ -680,6 +688,9 @@ fieldset {
 }
 .bg-gray{
     background-color: #181818;
+}
+.bg-blue{
+    background-color: #3868A6   
 }
 
 
