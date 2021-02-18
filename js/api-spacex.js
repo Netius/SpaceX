@@ -1,0 +1,76 @@
+const corsEnableUrl = "https://noroffcors.herokuapp.com/";
+var spacexUrl = corsEnableUrl + "https://api.spacexdata.com/v4/launches/";
+const spacexLaunchpads = corsEnableUrl + "https://api.spacexdata.com/v4/launchpads";
+const rocketsSpacex = corsEnableUrl + "https://api.spacexdata.com/v4/rockets";
+
+// Checks if any id are sendt in details
+const queryString = document.location.search;
+const params = new URLSearchParams(queryString);
+let launchId = params.get("id");
+
+if(launchId){
+    spacexUrl += launchId;
+}
+
+// Show loader when loading API
+const apiLoader = document.querySelector(".loader-container");
+
+async function fetchSpacex() {
+    try {
+        apiLoader.style.display = "flex";
+        // API call for launches
+        const responseLaunches = await fetch(spacexUrl);
+        const launches = await responseLaunches.json();
+       
+        // Api call for Launchpads
+        const responseLaunchpads = await fetch(spacexLaunchpads);
+        const launchpads = await responseLaunchpads.json();
+
+        // Api call for rockets
+        const responseRockets = await fetch(rocketsSpacex);
+        const rockets = await responseRockets.json();
+
+        createSpacexLaunches(launches ,launchpads, rockets);
+        apiLoader.style.display = "none";
+
+    } catch (error) {
+        throw error;
+    }
+
+}
+fetchSpacex();
+
+// Sorts array by date
+function sortDateLaunches(array){
+    array.sort(function(a,b){
+        return new Date (a.date_local) - new Date(b.date_local);
+      });
+}
+// Format date and return
+function formatDate(date){
+    var month = new Array();
+        month[0] = "Jan";
+        month[1] = "Feb";
+        month[2] = "Mar";
+        month[3] = "Apr";
+        month[4] = "May";
+        month[5] = "Jun";
+        month[6] = "Jul";
+        month[7] = "Aug";
+        month[8] = "Sep";
+        month[9] = "Oct";
+        month[10] = "Nov";
+        month[11] = "Dec";
+    
+    const launchDate = new Date(date);
+    let formatedDate = launchDate.getUTCDate() + " " + 
+                        month[launchDate.getMonth()] + ". " + 
+                        launchDate.getFullYear();
+   return formatedDate;
+}
+// Format text breaking after point.
+function formatText(text){
+    var formatedText = text.split('. ').join('. <br/>');
+    console.log(formatedText);
+    return formatedText;
+}

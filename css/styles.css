@@ -333,7 +333,7 @@ li > a:only-child:after {
     font-size: 20px;
 }
 .location-text{
-    font-size: 20px;
+    font-size: 22px;
 }
 .spaceship-name{
     font-family: pt-sans-semibold, sans-serif;
@@ -344,7 +344,7 @@ li > a:only-child:after {
     padding: 3em;
     margin: 1em;
     border-radius: 15px;
-    width: 300px;
+    width: 20%;
     -webkit-transition-duration: 0.5s;
     transition-duration: 0.5s;
 }
@@ -361,7 +361,7 @@ li > a:only-child:after {
     color: #c50000;
 }
 .btn-details{
-    font-family: pt-sans-regular, sans-serif;
+    font-family: pt-sans-semibold, sans-serif;
     color: #F2F2F2;
     font-size: 20px;
     letter-spacing: 1px;

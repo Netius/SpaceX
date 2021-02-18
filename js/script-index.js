@@ -1,38 +1,5 @@
-    const corsEnableUrl = "https://noroffcors.herokuapp.com/";
-    const spacexUrl = corsEnableUrl + "https://api.spacexdata.com/v4/launches";
-    const spacexLaunchpads = corsEnableUrl + "https://api.spacexdata.com/v4/launchpads";
-    const rocketsSpacex = corsEnableUrl + "https://api.spacexdata.com/v4/rockets";
-
     const calenderLaunches = document.getElementById("calendar-launches");
-    const apiLoader = document.querySelector(".loader-container");
-
     const upcomingLaunch = document.getElementById("upcoming-container");
-
-    async function fetchSpacex() {
-        try {
-            apiLoader.style.display = "flex";
-            // API call for launches
-            const responseLaunches = await fetch(spacexUrl);
-            const launches = await responseLaunches.json();
-           
-            // Api call for Launchpads
-            const responseLaunchpads = await fetch(spacexLaunchpads);
-            const launchpads = await responseLaunchpads.json();
-
-            // Api call for rockets
-            const responseRockets = await fetch(rocketsSpacex);
-            const rockets = await responseRockets.json();
-
-            createSpacexLaunches(launches ,launchpads, rockets);
-            apiLoader.style.display = "none";
-
-        } catch (error) {
-            throw error;
-        }
-
-    }
-    fetchSpacex();
-
 
     function createSpacexLaunches(spacex , launchpads, rockets) { 
         sortDateLaunches(spacex);
@@ -42,16 +9,16 @@
         let firstRocket ="";
 
         for(let launch of spacex){
-            if(new Date(launch.date_local) > new Date() && (counter <= 2)){
+            if(new Date(launch.date_local) > new Date() && (counter <= 5)){
                 const launchpad = launchpads.filter(element => element.id === launch.launchpad);
                 const rocket = rockets.filter(element => element.id === launch.rocket);
 
-                if (firstRocket === launch.rocket){
-                    console.log("LIKT");
-                    continue;
-                }
+                // if (firstRocket === launch.rocket){
+                //     console.log("LIKT");
+                //     continue;
+                // }
                 
-                firstRocket = launch.rocket;
+                // firstRocket = launch.rocket;
                 
                 let formatedDate = formatDate(launch.date_local);
                 

@@ -1,56 +1,14 @@
-const queryString = document.location.search;
-const params = new URLSearchParams(queryString);
-
-
-let launchId = params.get("id");
-// Checking just if is accessing upcoming.html direct
-if(!launchId){
-    launchId = "600f9a718f798e2a4d5f979d";
-}
-
-const corsEnableUrl = "https://noroffcors.herokuapp.com/";
-const spacexUrl = corsEnableUrl + "https://api.spacexdata.com/v4/launches/" + launchId;
-const spacexLaunchpads = corsEnableUrl + "https://api.spacexdata.com/v4/launchpads";
-const rocketsSpacex = corsEnableUrl + "https://api.spacexdata.com/v4/rockets";
-
-const apiLoader = document.querySelector(".loader-container");
-
 const detailsLaunch = document.getElementById("details-launch");
 
-async function fetchSpacex() {
-    try {
-        apiLoader.style.display = "flex";
-        // API call for launches
-        const responseLaunches = await fetch(spacexUrl);
-        const launch = await responseLaunches.json();
-       
-        // Api call for Launchpads
-        const responseLaunchpads = await fetch(spacexLaunchpads);
-        const launchpads = await responseLaunchpads.json();
-
-        // Api call for rockets
-        const responseRockets = await fetch(rocketsSpacex);
-        const rockets = await responseRockets.json();
-
-        createLaunchesDetails(launch ,launchpads, rockets);
-        apiLoader.style.display = "none";
-
-    } catch (error) {
-        throw error;
-    }
-
-}
-fetchSpacex();
-
-function createLaunchesDetails(launch ,launchpads, rockets){
+function createSpacexLaunches(launch ,launchpads, rockets){
+    // Filter launchpad and rocket based on their ID from launches
     const launchpad = launchpads.filter(element => element.id === launch.launchpad);
     const rocket = rockets.filter(element => element.id === launch.rocket);
-    console.log("LAUNCH" , launch);
-    console.log("PAD" , launchpad);
-    console.log("Rocket" , rocket);
    
+    // Formats date dd.month.yy
     let formatedDate = formatDate(launch.date_local);
     
+    // Format text breaking after point.
     let rocketText = formatText(rocket[0].description);
     let launchPadDetails = formatText(launchpad[0].details);
 
@@ -82,10 +40,4 @@ function createLaunchesDetails(launch ,launchpads, rockets){
                  
     detailsLaunch.innerHTML = detailHtml;          
 
-}
-
-function formatText(text){
-    var formatedText = text.split('. ').join('. <br/>');
-    console.log(formatedText);
-    return formatedText;
 }
