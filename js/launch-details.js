@@ -59,7 +59,7 @@ function createLaunchesDetails(launch ,launchpads, rockets){
                 <div class="subhead-container">
                     <div class="col"> 
                         <h2 class="spaceship-name">${launch.name}</h2>
-                        <span class="local-time"> Local Time</span><p class="launch-date pd-bottom">${formatedDate}</p>
+                        <p class="hero-date pd-bottom">${formatedDate}</p>
                         
                         <h2 class="spaceship-name"><i class="adress-icon fas fa-map-marker-alt"></i> ${launchpad[0].locality} - ${launchpad[0].region}</h2>
                         <p class="details-text pd-bottom">${launchPadDetails}</p>

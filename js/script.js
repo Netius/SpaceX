@@ -62,7 +62,7 @@
                             <div class="hero-text">
                                 <h1 class="hero-header">Upcoming launch</h1>
                                 <h2 class="hero-starship">${launch.name}</h2>
-                                <span class="local-time"> Local Time</span><p class="hero-date">${formatedDate}</p>
+                                <p class="hero-date">${formatedDate}</p>
                                 <div>
                                     <a class="btn-standard" title="Read more about upcoming launch" href="upcoming.html?id=${launch.id}">
                                         Read more
@@ -75,10 +75,10 @@
                 }
 
                 detailHtml += `
-                <div class="launches-container">
+                <div class="launches-container" title="Read more about upcoming launch" onclick="window.location='upcoming.html?id=${launch.id}'">
                     <ul>
                         <li class="spaceship-name"><h3>${launch.name}</h3></li>
-                        <span class="local-time"> Local Time</span><p class="hero-date">${formatedDate}</p>
+                         <li class="hero-date">${formatedDate}</li>
                         <li class="location-text"><i class="adress-icon fas fa-map-marker-alt"></i> ${launchpad[0].locality} - ${launchpad[0].region}</li>
                         <li class="location-text"><i class="rocket-icon fas fa-rocket"></i> ${rocket[0].name}</li>
                     </ul>

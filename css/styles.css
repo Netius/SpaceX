@@ -224,7 +224,7 @@ li > a:only-child:after {
 }
 .hero-date{
     display: inline-block;
-    background-color: rgba(242, 138, 46, .9);
+    background-color:#F28A2E;
     padding: 5px 15px;
     font-size: 22px;
     font-family: pt-sans-semibold, sans-serif;
@@ -272,7 +272,8 @@ li > a:only-child:after {
     background-color: #181818;
     font-size: 22px;
     color:white;
-    padding: 15px 20px;
+    padding: 6px 20px;
+    font-family: pt-sans-semibold, sans-serif;
 }
 
 /* CALENDAR SECTIOn */
@@ -336,6 +337,13 @@ li > a:only-child:after {
     margin: 1em;
     border-radius: 15px;
     width: 300px;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+.launches-container:hover{
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
 .rocket-icon{
@@ -358,8 +366,6 @@ li > a:only-child:after {
 
 .btn-details:hover{
     color: #F28A2E;
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
 }
 
 .link-arrow{
@@ -632,7 +638,6 @@ fieldset {
 
 /* ABOUT PAGE */
 .container-about{
-    /* background-color: #181818; */
     padding: 2em 0 4em 0;
     text-align: center;
 }
@@ -763,8 +768,8 @@ fieldset {
 
     /* ABOUT PAGE */
     .subhead-container{
-        margin: 1em;
-        padding: 1em 0;
+        margin: 0 1em;
+        padding: 2em 0;
         flex-direction: column;
     }
     .reverse-col{
@@ -797,5 +802,8 @@ fieldset {
     .flex-thirds{
         width: 100%;
     }
+    /* .col{
+        width: 100%;
+    } */
 
 }
