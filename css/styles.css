@@ -201,6 +201,10 @@ li > a:only-child:after {
     bottom: 20px;
 }
 
+.header-background{
+    background-color: #3868A6
+}
+
 .calender-text{
     color: #F2F2F2;
     margin: 8em 1em 1em 4em;
@@ -400,8 +404,8 @@ li > a:only-child:after {
     font-family: 'pt-sans-semibold', sans-serif;
 }
 .subhead-container{
-    margin: 3em 4em 0 6em;
-    padding: 3em 0;
+    margin: 0em 4em 0 6em;
+    padding: 6em 0;
     display: flex;
     justify-content: space-around;
 
@@ -494,9 +498,11 @@ li > a:only-child:after {
 
 /* CONTACT PAGE */
 .contact-text{
-    font-size: 24px;
+    font-size: 32px;
     color: #F2F2F2;
-    margin-bottom: 4em;
+    margin-bottom: 2em;
+    margin-top: 2em;
+    font-family: pt-sans-semibold, sans-serif;
 }
 
 .contact-hero-image{
@@ -626,7 +632,7 @@ fieldset {
 
 /* ABOUT PAGE */
 .container-about{
-    background-color: #181818;
+    /* background-color: #181818; */
     padding: 2em 0 4em 0;
     text-align: center;
 }
@@ -666,6 +672,9 @@ fieldset {
 .flex-thirds{
     width: 35%;
     margin: 1em;
+}
+.bg-gray{
+    background-color: #181818;
 }
 
 
