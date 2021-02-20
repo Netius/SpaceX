@@ -435,8 +435,12 @@ li > a:only-child:after {
     background-color: #181818;
     padding: 3em 0;
     margin: 3em 0;
-    
-
+}
+.credit-text{
+    color: #F2F2F2;
+}
+.credit-text:hover{
+    color: #F28A2E;
 }
 .col{
     flex:1;
