@@ -392,6 +392,7 @@ li > a:only-child:after {
     max-height: 750px;
     max-width: 1920px;
     margin: 0 auto; 
+    overflow: hidden;
 }
 
 /* ABOUT SECTION */
@@ -795,17 +796,43 @@ fieldset {
     .hero-header{
         font-size: 2.5em;
     }
+    .hero-text{
+        margin: 1em 2em;
+        bottom: 50px;
+    }
+    .hero-starship{
+        font-size: 2em;
+        margin: .5em 0;
+    }
+    .calender-text{
+        margin: 2em 2em;
+    }
+    #calendar-launches{
+        padding: 2em 0;
+    }
+    .launches-container{
+        width: 275px;
+    }
     .container-about {
         padding: 1em 0 2em 0;
+    }
+    .btn-standard{
+        margin-top: 2em;
     }
     .bg-container{
         margin: 0;
         padding: 1em 0;
     }
+    .about-text{
+        margin: 2em;
+    }
+    .hero-date{
+        font-size: 22px !important;
+    }
     /* Contact page */
     .contact-text{
         font-size: 22px;
-        margin-bottom: 2em;
+        margin: 2em 1em;
     }
     .col-contact{
         margin: 0 1em;
@@ -813,8 +840,24 @@ fieldset {
     .flex-thirds{
         width: 100%;
     }
-    /* .col{
+
+}
+@media (max-width: 480px) {
+    .hero-header{
+        font-size: 2em;
+    }
+    .hero-starship , .p-text , .spaceship-name{
+        font-size: 1.5em;
+    }
+
+    .location-text{
+        font-size: 18px;
+    }
+    .btn-details{
+        margin-top: 1em;
+    }
+    .launches-container{
         width: 100%;
-    } */
+    }
 
 }
