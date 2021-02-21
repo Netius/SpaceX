@@ -49,7 +49,6 @@
                     </a>
                 </div>
                  `;
-                 console.log(counter);   
                 counter++;
         }
        }        

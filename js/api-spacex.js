@@ -12,12 +12,15 @@ if(launchId){
     spacexUrl += launchId;
 }
 
-// Show loader when loading API
-const apiLoader = document.querySelector(".loader-container");
-
+// Show loader when loading API or error
+const apiLoader = document.querySelectorAll(".loader-container");
+const apiError = document.querySelectorAll(".error-container");
 async function fetchSpacex() {
     try {
-        apiLoader.style.display = "flex";
+           for (let loader of apiLoader){
+                 loader.style.display = "flex";
+           }
+        
         // API call for launches
         const responseLaunches = await fetch(spacexUrl);
         const launches = await responseLaunches.json();
@@ -31,10 +34,20 @@ async function fetchSpacex() {
         const rockets = await responseRockets.json();
 
         createSpacexLaunches(launches ,launchpads, rockets);
-        apiLoader.style.display = "none";
+        
+        for (let loader of apiLoader){
+            loader.style.display = "none";
+        }
+        for (let error of apiError ){
+            error.style.display = "none";
+        }             
 
     } catch (error) {
+        for (let error of apiError ){
+            error.style.display = "flex";
+        }
         throw error;
+
     }
 
 }
