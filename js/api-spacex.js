@@ -6,11 +6,14 @@ const rocketsSpacex = corsEnableUrl + "https://api.spacexdata.com/v4/rockets";
 // Checks if any id are sendt in details
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
+let firstLaunch = params.get("first"); //Uses to added bg color to date for the 3 first launches
 let launchId = params.get("id");
-
 if(launchId){
     spacexUrl += launchId;
 }
+
+
+
 
 // Show loader when loading API or error
 const apiLoader = document.querySelectorAll(".loader-container");

@@ -12,12 +12,18 @@ function createSpacexLaunches(launch ,launchpads, rockets){
     let rocketText = formatText(rocket[0].description);
     let launchPadDetails = formatText(launchpad[0].details);
 
+    
+    let dateClass="hero-date-upcoming";
+    if(firstLaunch === "false"){
+        dateClass = "";
+    }
+    
     let detailHtml= "";
         detailHtml += `
                 <div class="subhead-container">
                     <div class="col"> 
                         <h2 class="spaceship-name">${launch.name}</h2>
-                        <p class="hero-date pd-bottom">${formatedDate}</p>
+                        <p class="hero-date pd-bottom ${dateClass}"><i class="calendar-icon far fa-calendar-alt"></i>${formatedDate}</p>
                         
                         <h2 class="spaceship-name"><i class="adress-icon fas fa-map-marker-alt"></i> ${launchpad[0].locality} - ${launchpad[0].region}</h2>
                         <p class="details-text pd-bottom">${launchPadDetails}</p>

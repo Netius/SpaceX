@@ -224,10 +224,13 @@ li > a:only-child:after {
 }
 .hero-date{
     display: inline-block;
-    background-color:#F28A2E;
-    padding: 5px 15px;
-    font-size: 22px;
+    /* padding: 5px 5px; */
+    font-size: 22px !important;
     font-family: pt-sans-semibold, sans-serif;
+}
+.hero-date-upcoming{
+    background-color:#F28A2E;
+    padding: 5px 5px 5px 0;
 }
 .hero-starship{
     margin-top: .2em;
@@ -379,10 +382,23 @@ li > a:only-child:after {
 
 .rocket-icon{
     color: #8BB4D9;
+    margin-left: 3px;
+    margin-right: 10px;
+
 }
 .adress-icon{
     color: #c50000;
+    margin-left: 5px;
+    margin-right: 10px;
+
+
 }
+.calendar-icon{
+    color: #F2F2F2;
+    margin-left: 5px;
+    margin-right: 13px;
+}
+
 .btn-details{
     font-family: pt-sans-semibold, sans-serif;
     color: #F2F2F2;
@@ -732,6 +748,53 @@ fieldset {
 .bg-blue{
     background-color: #3868A6   
 }
+
+/* CALENDAR PAGE */
+
+.launch-calender-image{
+    width: 100%;
+    height: 350px;
+    max-width: 1920px;
+    margin: 0 auto;
+    background-image: url(../images/calender-spacex.jpg);
+    background-position: center bottom 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.launch-calender-text{
+    text-align: center;
+    font-size: 32px;
+    color: #F2F2F2;
+    margin-bottom: 2em;
+    padding-top: 2em;
+    font-family: pt-sans-semibold, sans-serif;
+}
+.launch-calender-container{
+    /* display: flex;
+    flex-direction: column;
+    align-content: center; */
+    width: 50%;
+    min-width: 600px;
+    margin: 0 auto;
+}
+
+.launch-calender-child{
+    border-bottom: 1px solid #4D4D4D;  
+    margin-bottom: 1em;
+}
+
+.launch-calender-child ul{
+    list-style: none;
+}
+.launch-calender-child .btn-standard{
+    margin: 2em auto;
+    
+}
+
+.launch-calender-child li{
+    margin: 10px auto;
+}
+
 
 
 /* MEDIE QUERIE */
