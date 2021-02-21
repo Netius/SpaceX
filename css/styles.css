@@ -770,17 +770,18 @@ fieldset {
     font-family: pt-sans-semibold, sans-serif;
 }
 .launch-calender-container{
-    /* display: flex;
-    flex-direction: column;
-    align-content: center; */
     width: 50%;
     min-width: 600px;
     margin: 0 auto;
 }
 
 .launch-calender-child{
-    border-bottom: 1px solid #4D4D4D;  
-    margin-bottom: 1em;
+    border-bottom: 10px solid #4D4D4D;  
+    margin-bottom: 4em;
+}
+.launch-calender-child:last-child{
+    border-bottom: 0;
+    padding-bottom: 3em;
 }
 
 .launch-calender-child ul{
@@ -929,7 +930,7 @@ fieldset {
         margin: 2em;
     }
     .hero-date{
-        font-size: 22px !important;
+        font-size: 30px !important;
     }
     /* Contact page */
     .contact-text{
