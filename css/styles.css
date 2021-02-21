@@ -37,10 +37,10 @@
 
 @font-face {
     font-family: 'pt-sans-semibold';
-    src: url('../fonts/static/PTsans-Bold.eot?#iefix') format('embedded-opentype'),
+    src: url('../fonts/static/PTSans-Bold.eot?#iefix') format('embedded-opentype'),
         /*        url('../fonts/OpenSans-Regular.woff') format('woff'),*/
-        url('../fonts/static/PTsans-Bold.ttf') format('truetype'),
-        url('../fonts/static/PTsans-Bold#svgFontName') format('svg');
+        url('../fonts/static/PTSans-Bold.ttf') format('truetype'),
+        url('../fonts/static/PTSans-Bold#svgFontName') format('svg');
 }
 /*limited reset*/
 
