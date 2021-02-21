@@ -1,137 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
+<body>
+    <head>
+        <script src="https://kit.fontawesome.com/c7b2c2ac29.js" crossorigin="anonymous"></script>
+        <meta charset="utf-8">
+        <title>Home - SpaceX</title>
+        <meta name="author" content="SpaceX - Making history">
+        <meta name="description" content="SpaceX - Latest informations about upcomming launches">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    </head>
 
-<head>
-    <script src="https://kit.fontawesome.com/c7b2c2ac29.js" crossorigin="anonymous"></script>
-    <meta charset="utf-8">
-    <title>Home - SpaceX</title>
-    <meta name="author" content="SpaceX - Making history">
-    <meta name="description" content="SpaceX - Latest informations about upcomming launches">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-</head>
-
-<header role="banner" >
-    <nav role="navigation" class="container-width">
-        <a href="index.html" title="Home - SpaceX">
-            <img alt="SpaceX logo" id="logo" title="SpaceX" src="images/SpaceX-Logo.png"></a>
-        <label for="drop" id="toogle_menu" onclick="toogleMenuIcon(event)" class="toggle">
-            &nbsp;
-            <span id="menu-icon" class="fa fa-bars fa-lg">
-            </span>
-        </label> <input type="checkbox" id="drop" />
-        <ul class="menu">
-            <li>
-                <a class="links" href="calendar.html" title="Check out our launch calendar"> Launch calendar</a>
-            </li>
-            <li>
-                <a class="links" href="contact.html" title="Need more support, contact us!">Contact us</a>
-            </li>
-            <li>
-                <a class="links" href="about.html" title="Learn more about SpaceX">About</a>
-            </li>
-        </ul>
-    </nav>
-    <div class="main-hero-image">
-        <div class="credit-container">
-            <span class="w-color">Photo by
-                <a class="credit-text" target="_blank" title="Link to author on Pixabay"
-                    href="https://pixabay.com/no/users/spacex-imagery-885857/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=693192">SpaceX-Imagery</a>
-            </span>
+    <header role="banner">
+        <nav role="navigation" class="container-width">
+            <a href="index.html" title="Home - SpaceX">
+                <img alt="SpaceX logo" id="logo" title="SpaceX" src="images/SpaceX-Logo.png"></a>
+            <label for="drop" id="toogle_menu" onclick="toogleMenuIcon(event)" class="toggle">
+                &nbsp;
+                <span id="menu-icon" class="fa fa-bars fa-lg">
+                </span>
+            </label> <input type="checkbox" id="drop" />
+            <ul class="menu">
+                <li>
+                    <a class="links" href="calendar.html" title="Check out our launch calendar"> Launch calendar</a>
+                </li>
+                <li>
+                    <a class="links" href="contact.html" title="Need more support, contact us!">Contact us</a>
+                </li>
+                <li>
+                    <a class="links" href="about.html" title="Learn more about SpaceX">About</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="main-hero-image">
+            <div class="credit-container">
+                <span class="w-color">Photo by
+                    <a class="credit-text" target="_blank" title="Link to author on Pixabay"
+                        href="https://pixabay.com/no/users/spacex-imagery-885857/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=693192">SpaceX-Imagery</a>
+                </span>
+            </div>
+            <div class="container-hero">
+                <div class="hero-text">
+                    <h1 class="hero-header">Upcoming launch</h1>
+                    <div class="loader-container">
+                        <div class="loader"></div>
+                        <div class="error-container">
+                            <p class="error-api">Ops...something went wrong.<br> <span class="error-text">It is "our"
+                                    fault!</span>
+                                <i class="sad-icon far fa-frown fa-lg"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div id="upcoming-container"></div>
+                </div>
+            </div>
         </div>
-        <div class="container-hero">
-            <div class="hero-text">
-                <h1 class="hero-header">Upcoming launch</h1>
-                <div  class="loader-container">
+    </header>
+    <section class="cl-image">
+        <div class="container-calender">
+            <div class="calender-hero-image">
+                <div class="calender-text">
+                    <h2 class="hero-header">Launch calendar</h1>
+                        <p class="p-text">Check out when is the next launch in our calendar
+                    </h2>
+                </div>
+                <div class="loader-container">
                     <div class="loader"></div>
                     <div class="error-container">
-                        <p class="error-api">Ops...something went wrong.<br> <span class="error-text">It is "our" fault!</span> 
+                        <p class="error-api">Ops...something went wrong.<br> <span class="error-text">It is "our"
+                                fault!</span>
                             <i class="sad-icon far fa-frown fa-lg"></i>
                         </p>
                     </div>
                 </div>
-                <div id="upcoming-container"></div>
-        </div>
-    </div>
-
-
-    </div>
-</header>
-<section class="cl-image">
-    <div class="container-calender">
-        <div class="calender-hero-image">
-            <div class="calender-text">
-                <h2 class="hero-header">Launch calendar</h1>
-                    <p class="p-text">Check out when is the next launch in our calendar
-                </h2>
-            </div>
-            <div class="loader-container">
-                <div class="loader"></div>
-                <div class="error-container">
-                    <p class="error-api">Ops...something went wrong.<br> <span class="error-text">It is "our" fault!</span> 
-                        <i class="sad-icon far fa-frown fa-lg"></i>
-                    </p>
-                </div>
-            </div>
-            <div id="calendar-launches"></div>
-            <div style="text-align: center;">
-                <a class="btn-standard" title="Check out our full calendar" href="calendar.html">
-                    Full calendar
-                 </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section>
-    <div class="about-hero">
-        <div class="credit-container">
-            <span class="w-color">Photo by
-                <a class="credit-text" target="_blank" title="Link to author on Pixabay"
-                    href="https://pixabay.com/no/users/spacex-imagery-885857/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=693192">SpaceX-Imagery</a>
-            </span>
-        </div>
-        <div class="container-hero">
-            <div class="about-text">
-                <h2 class="hero-header">About us</h1>
-                <p class="p-text">Learn more about SpaceX and Elon Musk</p>
-                <div>
-                    <a class="btn-standard" title="Learn more about SpaceX and Elon Musk" href="about.html" target="_blank">
-                        Read more
+                <div id="calendar-launches"></div>
+                <div style="text-align: center;">
+                    <a class="btn-standard" title="Check out our full calendar" href="calendar.html">
+                        Full calendar
                     </a>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- FOOTER -->
-<footer role="contentinfo" id="footer">
-   <div id="footer-wrapper"> 
-    <ul class="social-icons">
-        <li>
-            <a title="Follow us on Facebook" href="#">
-                <i class="links fab fa-facebook fa-2x"></i>
-            </a>
-        </li>
-        <li>
-            <a title="Follow us on Facebook" href="#">
-                <i class="links fab fa-instagram fa-2x"></i>
-            </a>
-        </li>
-        <li>
-            <a title="Follow us on Facebook" href="#">
-                <i class="links fab fa-twitter fa-2x"></i>
-            </a>
-        </li>
-    </ul>
-    <p class="copyrights">&copy;2021 All rights reserved to <a href="index.html" title="SpaceX">spacex.com</a></p>
-</div>
-</footer>
-<script src="js/script-index.js" crossorigin="anonymous"></script>
-<script src="js/api-spacex.js" crossorigin="anonymous"></script>
-<script src="js/menu.js" crossorigin="anonymous"></script>
+    <section>
+        <div class="about-hero">
+            <div class="credit-container">
+                <span class="w-color">Photo by
+                    <a class="credit-text" target="_blank" title="Link to author on Pixabay"
+                        href="https://pixabay.com/no/users/spacex-imagery-885857/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=693192">SpaceX-Imagery</a>
+                </span>
+            </div>
+            <div class="container-hero">
+                <div class="about-text">
+                    <h2 class="hero-header">About us</h1>
+                        <p class="p-text">Learn more about SpaceX and Elon Musk</p>
+                        <div>
+                            <a class="btn-standard" title="Learn more about SpaceX and Elon Musk" href="about.html"
+                                target="_blank">
+                                Read more
+                            </a>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer role="contentinfo" id="footer">
+        <div id="footer-wrapper">
+            <ul class="social-icons">
+                <li>
+                    <a title="Follow us on Facebook" href="#">
+                        <i class="links fab fa-facebook fa-2x"></i>
+                    </a>
+                </li>
+                <li>
+                    <a title="Follow us on Facebook" href="#">
+                        <i class="links fab fa-instagram fa-2x"></i>
+                    </a>
+                </li>
+                <li>
+                    <a title="Follow us on Facebook" href="#">
+                        <i class="links fab fa-twitter fa-2x"></i>
+                    </a>
+                </li>
+            </ul>
+            <p class="copyrights">&copy;2021 All rights reserved to <a href="index.html" title="SpaceX">spacex.com</a>
+            </p>
+        </div>
+    </footer>
+    <script src="js/script-index.js" crossorigin="anonymous"></script>
+    <script src="js/api-spacex.js" crossorigin="anonymous"></script>
+    <script src="js/menu.js" crossorigin="anonymous"></script>
 
 </body>
 

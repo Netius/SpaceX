@@ -1,93 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <script src="https://kit.fontawesome.com/c7b2c2ac29.js" crossorigin="anonymous"></script>
-    <meta charset="utf-8">
-    <title>Upcoming - SpaceX</title>
-    <meta name="author" content="SpaceX - Upcoming launch of SpaceX">
-    <meta name="description" content="SpaceX - Follow the upcoming launch of SpaceX">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-</head>
+<body>
 
-<header role="banner" class="container-width">
-    <nav role="navigation">
-        <a href="index.html" title="Home - SpaceX">
-            <img alt="SpaceX logo" id="logo" title="SpaceX" src="images/SpaceX-Logo.png"></a>
-        <label for="drop" id="toogle_menu" onclick="toogleMenuIcon(event)" class="toggle">
-            &nbsp;
-            <span id="menu-icon" class="fa fa-bars fa-lg">
-            </span>
-        </label> <input type="checkbox" id="drop" />
-        <ul class="menu">
-            <li>
-                <a class="links link-active" href="calendar.html" title="Check out our launch calendar"> Launch calendar</a>
-            </li>
-            <li>
-                <a class="links" href="contact.html" title="Need more support, contact us!">Contact us</a>
-            </li>
-            <li>
-                <a class="links" href="about.html" title="Learn more about SpaceX">About</a>
-            </li>
-        </ul>
-    </nav>
-    <div class="upcoming-hero-image">
-        <div class="credit-container">
-            <span class="w-color">Photo by
-                <a class="credit-text" target="_blank" title="Link to author on Pixabay"
-                    href="https://pixabay.com/no/users/spacex-imagery-885857/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=693192">SpaceX-Imagery</a>
-            </span>
+    <head>
+        <script src="https://kit.fontawesome.com/c7b2c2ac29.js" crossorigin="anonymous"></script>
+        <meta charset="utf-8">
+        <title>Upcoming - SpaceX</title>
+        <meta name="author" content="SpaceX - Upcoming launch of SpaceX">
+        <meta name="description" content="SpaceX - Follow the upcoming launch of SpaceX">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    </head>
+
+    <header role="banner" class="container-width">
+        <nav role="navigation">
+            <a href="index.html" title="Home - SpaceX">
+                <img alt="SpaceX logo" id="logo" title="SpaceX" src="images/SpaceX-Logo.png"></a>
+            <label for="drop" id="toogle_menu" onclick="toogleMenuIcon(event)" class="toggle">
+                &nbsp;
+                <span id="menu-icon" class="fa fa-bars fa-lg">
+                </span>
+            </label> <input type="checkbox" id="drop" />
+            <ul class="menu">
+                <li>
+                    <a class="links link-active" href="calendar.html" title="Check out our launch calendar"> Launch
+                        calendar</a>
+                </li>
+                <li>
+                    <a class="links" href="contact.html" title="Need more support, contact us!">Contact us</a>
+                </li>
+                <li>
+                    <a class="links" href="about.html" title="Learn more about SpaceX">About</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="upcoming-hero-image">
+            <div class="credit-container">
+                <span class="w-color">Photo by
+                    <a class="credit-text" target="_blank" title="Link to author on Pixabay"
+                        href="https://pixabay.com/no/users/spacex-imagery-885857/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=693192">SpaceX-Imagery</a>
+                </span>
+            </div>
         </div>
-    </div>
-</header>
-<section class="container-about header-background">
-    <div class="contact-header">
-        <h1 class="hero-header">UPCOMING</h1>
-    </div>
-
-</section>
-
-<section class="bg-gray">
-    <div class="loader-container">
-        <div class="loader"></div>
-        <div class="error-container">
-            <p class="error-api">Ops...something went wrong.<br> <span class="error-text">It is "our" fault!</span> 
-                <i class="sad-icon far fa-frown fa-lg"></i>
-            </p>
+    </header>
+    <section class="container-about header-background">
+        <div class="contact-header">
+            <h1 class="hero-header">UPCOMING</h1>
         </div>
-    </div>
-    
+
+    </section>
+
+    <section class="bg-gray">
+        <div class="loader-container">
+            <div class="loader"></div>
+            <div class="error-container">
+                <p class="error-api">Ops...something went wrong.<br> <span class="error-text">It is "our" fault!</span>
+                    <i class="sad-icon far fa-frown fa-lg"></i>
+                </p>
+            </div>
+        </div>
+
         <div id="details-launch" style="color: white;"></div>
 
-</section>
-<!-- FOOTER -->
-<footer role="contentinfo" id="footer">
-    <div id="footer-wrapper">
-        <ul class="social-icons">
-            <li>
-                <a title="Follow us on Facebook" href="#">
-                    <i class="links fab fa-facebook fa-2x"></i>
-                </a>
-            </li>
-            <li>
-                <a title="Follow us on Facebook" href="#">
-                    <i class="links fab fa-instagram fa-2x"></i>
-                </a>
-            </li>
-            <li>
-                <a title="Follow us on Facebook" href="#">
-                    <i class="links fab fa-twitter fa-2x"></i>
-                </a>
-            </li>
-        </ul>
-        <p class="copyrights">&copy;2021 All rights reserved to <a href="index.html" title="SpaceX">spacex.com</a></p>
-    </div>
-</footer>
-<script src="js/api-spacex.js" crossorigin="anonymous"></script>
-<script src="js/launch-details.js" crossorigin="anonymous"></script>
-<script src="js/menu.js" crossorigin="anonymous"></script>
+    </section>
+    <!-- FOOTER -->
+    <footer role="contentinfo" id="footer">
+        <div id="footer-wrapper">
+            <ul class="social-icons">
+                <li>
+                    <a title="Follow us on Facebook" href="#">
+                        <i class="links fab fa-facebook fa-2x"></i>
+                    </a>
+                </li>
+                <li>
+                    <a title="Follow us on Facebook" href="#">
+                        <i class="links fab fa-instagram fa-2x"></i>
+                    </a>
+                </li>
+                <li>
+                    <a title="Follow us on Facebook" href="#">
+                        <i class="links fab fa-twitter fa-2x"></i>
+                    </a>
+                </li>
+            </ul>
+            <p class="copyrights">&copy;2021 All rights reserved to <a href="index.html" title="SpaceX">spacex.com</a>
+            </p>
+        </div>
+    </footer>
+    <script src="js/api-spacex.js" crossorigin="anonymous"></script>
+    <script src="js/launch-details.js" crossorigin="anonymous"></script>
+    <script src="js/menu.js" crossorigin="anonymous"></script>
 
 </body>
 

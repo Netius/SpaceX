@@ -1,120 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <script src="https://kit.fontawesome.com/c7b2c2ac29.js" crossorigin="anonymous"></script>
-    <meta charset="utf-8">
-    <title>Contact us - SpaceX</title>
-    <meta name="author" content="SpaceX - Making contact with SpaceX is easy">
-    <meta name="description" content="SpaceX - Contact us if any question and more information">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-</head>
+<body>
 
-<header role="banner" class="container-width">
-    <nav role="navigation" >
-        <a href="index.html" title="Home - SpaceX">
-            <img alt="SpaceX logo" id="logo" title="SpaceX" src="images/SpaceX-Logo.png"></a>
-        <label for="drop" id="toogle_menu" onclick="toogleMenuIcon(event)" class="toggle">
-            &nbsp;
-            <span id="menu-icon" class="fa fa-bars fa-lg">
-            </span>
-        </label> <input type="checkbox" id="drop" />
-        <ul class="menu">
-            <li>
-                <a class="links" href="calendar.html" title="Check out our launch calendar"> Launch calendar</a>
-            </li>
-            <li>
-                <a class="links link-active" href="contact.html" title="Need more support, contact us!">Contact us</a>
-            </li>
-            <li>
-                <a class="links" href="about.html" title="Learn more about SpaceX">About</a>
-            </li>
-        </ul>
-    </nav>
-    <div class="contact-hero-image">
-        <div class="credit-container">
-            <span class="w-color">Photo by
-                <a class="credit-text" target="_blank" title="Link to author on Pixabay"
-                    href="https://pixabay.com/no/users/spacex-imagery-885857/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=693264">SpaceX-Imagery</a>
-            </span>
+    <head>
+        <script src="https://kit.fontawesome.com/c7b2c2ac29.js" crossorigin="anonymous"></script>
+        <meta charset="utf-8">
+        <title>Contact us - SpaceX</title>
+        <meta name="author" content="SpaceX - Making contact with SpaceX is easy">
+        <meta name="description" content="SpaceX - Contact us if any question and more information">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    </head>
+
+    <header role="banner" class="container-width">
+        <nav role="navigation">
+            <a href="index.html" title="Home - SpaceX">
+                <img alt="SpaceX logo" id="logo" title="SpaceX" src="images/SpaceX-Logo.png"></a>
+            <label for="drop" id="toogle_menu" onclick="toogleMenuIcon(event)" class="toggle">
+                &nbsp;
+                <span id="menu-icon" class="fa fa-bars fa-lg">
+                </span>
+            </label> <input type="checkbox" id="drop" />
+            <ul class="menu">
+                <li>
+                    <a class="links" href="calendar.html" title="Check out our launch calendar"> Launch calendar</a>
+                </li>
+                <li>
+                    <a class="links link-active" href="contact.html" title="Need more support, contact us!">Contact
+                        us</a>
+                </li>
+                <li>
+                    <a class="links" href="about.html" title="Learn more about SpaceX">About</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="contact-hero-image">
+            <div class="credit-container">
+                <span class="w-color">Photo by
+                    <a class="credit-text" target="_blank" title="Link to author on Pixabay"
+                        href="https://pixabay.com/no/users/spacex-imagery-885857/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=693264">SpaceX-Imagery</a>
+                </span>
+            </div>
         </div>
-    </div>
-</header>
-<section class="container-about header-background">
-    <div class="contact-header" >
-        <h1 class="hero-header">CONTACT US</h1>
-    </div>
-</section>
-<section class="container-form">
-    <h2 id="hero-contact-p" class="contact-text">Any questions? Just contact us.</h2>
-    <div id="contact" class="contact-form">
-        <div class="col-contact">
-            <form name="contactform">
-                <fieldset>
-                    <label for="first_name">Name *</label>
-                    <input id="first_name" name="first_name" placeholder="Ola Nordmann" type="text" required />
-                    <div class="error" id="nameError">
-                        <span>Name must have at least 5 characters</span>
-                    </div>
-                </fieldset>
-                <fieldset>
-                    <label for="email">Email *</label>
-                    <input id="email" name="email" placeholder="olanordmann@nord.no" type="email" required />
-                    <div class="error" id="emailError">
-                        <span>Please enter a valid email address</span>
-                    </div>
-                </fieldset>
-                <fieldset>
-                    <label for="comments">Message *</label>
-                    <textarea id="comments" name="comments" placeholder="Type your Message Here...."
-                        required></textarea>
-                    <div class="error" id="messageError">
-                        <span>Message must have at least 10 characters</span>
-                    </div>
-                </fieldset>
-                <fieldset>
-                    <button name="submit" type="submit" value="Submit" id="contact-submit" class="btn-standard">
-                        SEND
-                    </button>
-                </fieldset>
-            </form>
+    </header>
+    <section class="container-about header-background">
+        <div class="contact-header">
+            <h1 class="hero-header">CONTACT US</h1>
         </div>
-    </div>
-    <div id="thanks-message">
-        <h2>Thank you!</h2>
-        <p>SpaceX will contact you soon</p>
-        <a href="index.html" title="Home - SpaceX">
-            <img alt="SpaceX logo" width="250" title="SpaceX" src="images/SpaceX-Logo.png">
-        </a>
-    </div>
-</section>
-<!-- FOOTER -->
-<footer role="contentinfo" id="footer">
-   <div id="footer-wrapper"> 
-    <ul class="social-icons">
-        <li>
-            <a title="Follow us on Facebook" href="#">
-                <i class="links fab fa-facebook fa-2x"></i>
+    </section>
+    <section class="container-form">
+        <h2 id="hero-contact-p" class="contact-text">Any questions? Just contact us.</h2>
+        <div id="contact" class="contact-form">
+            <div class="col-contact">
+                <form name="contactform">
+                    <fieldset>
+                        <label for="first_name">Name *</label>
+                        <input id="first_name" name="first_name" placeholder="Ola Nordmann" type="text" required />
+                        <div class="error" id="nameError">
+                            <span>Name must have at least 5 characters</span>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <label for="email">Email *</label>
+                        <input id="email" name="email" placeholder="olanordmann@nord.no" type="email" required />
+                        <div class="error" id="emailError">
+                            <span>Please enter a valid email address</span>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <label for="comments">Message *</label>
+                        <textarea id="comments" name="comments" placeholder="Type your Message Here...."
+                            required></textarea>
+                        <div class="error" id="messageError">
+                            <span>Message must have at least 10 characters</span>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <button name="submit" type="submit" value="Submit" id="contact-submit" class="btn-standard">
+                            SEND
+                        </button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <div id="thanks-message">
+            <h2>Thank you!</h2>
+            <p>SpaceX will contact you soon</p>
+            <a href="index.html" title="Home - SpaceX">
+                <img alt="SpaceX logo" width="250" title="SpaceX" src="images/SpaceX-Logo.png">
             </a>
-        </li>
-        <li>
-            <a title="Follow us on Facebook" href="#">
-                <i class="links fab fa-instagram fa-2x"></i>
-            </a>
-        </li>
-        <li>
-            <a title="Follow us on Facebook" href="#">
-                <i class="links fab fa-twitter fa-2x"></i>
-            </a>
-        </li>
-    </ul>
-    <p class="copyrights">&copy;2021 All rights reserved to <a href="index.html" title="SpaceX">spacex.com</a></p>
-</div>
-</footer>
-<script src="js/form-validation.js" crossorigin="anonymous"></script>
-<script src="js/menu.js" crossorigin="anonymous"></script>
+        </div>
+    </section>
+    <!-- FOOTER -->
+    <footer role="contentinfo" id="footer">
+        <div id="footer-wrapper">
+            <ul class="social-icons">
+                <li>
+                    <a title="Follow us on Facebook" href="#">
+                        <i class="links fab fa-facebook fa-2x"></i>
+                    </a>
+                </li>
+                <li>
+                    <a title="Follow us on Facebook" href="#">
+                        <i class="links fab fa-instagram fa-2x"></i>
+                    </a>
+                </li>
+                <li>
+                    <a title="Follow us on Facebook" href="#">
+                        <i class="links fab fa-twitter fa-2x"></i>
+                    </a>
+                </li>
+            </ul>
+            <p class="copyrights">&copy;2021 All rights reserved to <a href="index.html" title="SpaceX">spacex.com</a>
+            </p>
+        </div>
+    </footer>
+    <script src="js/form-validation.js" crossorigin="anonymous"></script>
+    <script src="js/menu.js" crossorigin="anonymous"></script>
 
 </body>
 
