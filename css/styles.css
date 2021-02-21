@@ -258,6 +258,7 @@ li > a:only-child:after {
 }
 
 .main-hero-image{
+    position: relative;
     width: 100%;
     height: calc(100vh - 10vh);
     max-height: 900px;
@@ -397,6 +398,7 @@ li > a:only-child:after {
 
 /* ABOUT SECTION */
 .about-hero{
+    position: relative;
     max-width: 1920px;   
     margin: 0 auto;
     height: calc(100vh - 10vh);
@@ -439,8 +441,19 @@ li > a:only-child:after {
 .credit-text{
     color: #F2F2F2;
 }
+.w-color{
+    color: #F2F2F2;
+}
 .credit-text:hover{
     color: #F28A2E;
+}
+.credit-container{
+    background-color: #0D0D0D;
+    padding: 5px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 14px;
 }
 .col{
     flex:1;

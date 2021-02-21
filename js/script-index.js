@@ -25,9 +25,6 @@
                 // Show upcoming launch i header
                 if (counter === 0){
                     upcomingHtml = `
-                        <div class="container-hero">
-                            <div class="hero-text">
-                                <h1 class="hero-header">Upcoming launch</h1>
                                 <h2 class="hero-starship">${launch.name}</h2>
                                 <p class="hero-date">${formatedDate}</p>
                                 <div>
@@ -35,8 +32,6 @@
                                         Read more
                                     </a>
                                 </div>
-                            </div>
-                        </div>
                     `;
                     upcomingLaunch.innerHTML = upcomingHtml; 
                 }
