@@ -771,7 +771,6 @@ fieldset {
 }
 .launch-calender-container{
     width: 50%;
-    min-width: 600px;
     margin: 0 auto;
 }
 
@@ -884,7 +883,7 @@ fieldset {
     /* ABOUT PAGE */
     .subhead-container{
         margin: 0 1em;
-        padding: 2em 0;
+        padding: 3em 0;
         flex-direction: column;
     }
     .reverse-col{
@@ -930,18 +929,29 @@ fieldset {
         margin: 2em;
     }
     .hero-date{
-        font-size: 30px !important;
+        font-size: 22px;
     }
     /* Contact page */
     .contact-text{
-        font-size: 22px;
+        font-size: 26px;
         margin: 2em 1em;
+    }
+    .launch-calender-text{
+        font-size: 26px;
+        /* text-align: left; */
     }
     .col-contact{
         margin: 0 1em;
     }
     .flex-thirds{
         width: 100%;
+    }
+    /* CALENDAF PAGE */
+    .launch-calender-container{
+        width: 100%;        
+    }
+    .ct-calender{
+        margin: 0 2em;
     }
 
 }
@@ -952,12 +962,18 @@ fieldset {
     .hero-starship , .p-text , .spaceship-name{
         font-size: 1.5em;
     }
+    .hero-text , .calender-text, .about-text, .contact-text{
+        margin: 1em 1em;
+    }
 
     .location-text{
         font-size: 18px;
     }
     .btn-details{
         margin-top: 1em;
+    }
+    .btn-standard{
+        padding: 10px 15px;
     }
     .launches-container{
         width: 100%;
@@ -968,8 +984,20 @@ fieldset {
         width: 60px;
         height: 60px;
       }
-      .loader-container{    
+    .loader-container{    
         margin-top: 3em;
     }
+    .col{
+        margin: auto 0;
+    }
+    .pd-bottom{
+        margin-bottom: 2em;
+    }
+    .figcaption-text{
+        font-size: 14px;
+    }
+    .ct-calender{
+        margin: auto 1em;
+    }
 
-}
+ }
