@@ -198,7 +198,7 @@ li > a:only-child:after {
     color: #F2F2F2;
     margin: 1em 4em 1em;
     position: absolute;
-    bottom: 20px;
+    bottom: 7em;
 }
 
 .header-background{
@@ -265,6 +265,7 @@ li > a:only-child:after {
     width: 100%;
     height: calc(100vh - 10vh);
     max-height: 900px;
+    min-height: 600px;
     max-width: 1920px;
     margin: 0 auto;
     background-image: url(../images/Starlink21.jpg);
@@ -430,14 +431,14 @@ li > a:only-child:after {
     margin: 0 auto !important;
 }
 
-.container-hero{
+/* .container-hero{
     position: relative;
     height: calc(100vh - 20vh);
     max-height: 750px;
     max-width: 1920px;
     margin: 0 auto; 
     overflow: hidden;
-}
+} */
 
 /* ABOUT SECTION */
 .about-hero{
@@ -445,6 +446,7 @@ li > a:only-child:after {
     max-width: 1920px;   
     margin: 0 auto;
     height: calc(100vh - 10vh);
+    min-height: 600px;
     max-height: 800px;
     background-image: url(../images/about-spacex.jpg);
     background-position: center bottom 80%;
@@ -969,6 +971,7 @@ fieldset {
     .hero-text , .calender-text, .about-text, .contact-text{
         margin: 1em 1em;
     }
+
 
     .location-text{
         font-size: 18px;
