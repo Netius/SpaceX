@@ -21,8 +21,11 @@ function createSpacexLaunches(launch ,launchpads, rockets){
     let detailHtml= "";
         detailHtml += `
                 <div class="subhead-container">
-                    <div class="col"> 
-                        <h2 class="spaceship-name">${launch.name}</h2>
+                    <div class="col">
+                        <h2 class="spaceship-name">${launch.name} 
+                            <span class="location-text pd-left">#${launch.flight_number}
+                            </span>
+                        </h2>
                         <p class="hero-date pd-bottom ${dateClass}"><i class="calendar-icon far fa-calendar-alt"></i>${formatedDate}</p>
                         
                         <h2 class="spaceship-name"><i class="adress-icon fas fa-map-marker-alt"></i> ${launchpad[0].locality} - ${launchpad[0].region}</h2>

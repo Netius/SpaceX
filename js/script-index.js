@@ -24,7 +24,8 @@
                 // Show upcoming launch i header
                 if (counter === 0){
                     upcomingHtml = `
-                                <h2 class="hero-starship">${launch.name}</h2>
+                                <h2 class="hero-starship">${launch.name}<span class="location-text pd-left">#${launch.flight_number}
+                                </span></h2>
                                 <p class="hero-date ${dateClass}"><i class="calendar-icon far fa-calendar-alt"></i>${formatedDate}</p>
                                 <div>
                                     <a class="btn-standard" title="Read more about ${launch.name} launch" href="upcoming.html?id=${launch.id}&first=${upcoming}">
@@ -38,7 +39,13 @@
                 detailHtml += `
                 <div class="launches-container" title="Read more about ${launch.name} launch" onclick="window.location='upcoming.html?id=${launch.id}&first=${upcoming}'">
                     <ul>
-                        <li class="spaceship-name"><h3>${launch.name}</h3></li>
+                        <li class="spaceship-name">
+                            <h3>${launch.name}
+                                <span class="location-text flight-container">
+                                    #${launch.flight_number}
+                                </span>
+                            </h3>
+                        </li>
                          <li class="hero-date ${dateClass}"><i class="calendar-icon far fa-calendar-alt"></i>${formatedDate}</li>
                         <li class="location-text"><i class="adress-icon fas fa-map-marker-alt"></i> ${launchpad[0].locality} - ${launchpad[0].region}</li>
                         <li class="location-text"><i class="rocket-icon fas fa-rocket"></i> ${rocket[0].name}</li>

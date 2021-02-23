@@ -796,12 +796,21 @@ fieldset {
     list-style: none;
 }
 .launch-calender-child .btn-standard{
-    margin: 2em auto;
-    
+    margin: 2em auto;   
+}
+
+.pd-left{
+    padding-left: 1em;
 }
 
 .launch-calender-child li{
     margin: 10px auto;
+}
+
+.flight-container{
+    float:right;
+    margin-top: 10px;
+    font-family: pt-sans-semibold, sans-serif;
 }
 
 /********************** MEDIE QUERIE ***********************************************/

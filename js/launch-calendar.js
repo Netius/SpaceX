@@ -13,6 +13,9 @@ function createSpacexLaunches(spacex , launchpads, rockets) {
             const launchpad = launchpads.filter(element => element.id === launch.launchpad);
             const rocket = rockets.filter(element => element.id === launch.rocket);
             let formatedDate = formatDate(launch.date_local);
+
+            console.log(launch);
+
             
              // Adding bg-color to date for the 3 firsts launches
              if(counter > 2){
@@ -23,8 +26,13 @@ function createSpacexLaunches(spacex , launchpads, rockets) {
             detailHtml += `
             <div class="launch-calender-child">
                 <ul>
-                    <li class="spaceship-name"><h3>${launch.name}</h3></li>
-                     <li class="hero-date ${dateClass}"><i class="calendar-icon far fa-calendar-alt"></i>${formatedDate}</li>
+                    <li class="spaceship-name"><h3>${launch.name}
+                        <span class="location-text flight-container">
+                            #${launch.flight_number}
+                        </span>
+                        </h3>
+                    </li>
+                    <li class="hero-date ${dateClass}"><i class="calendar-icon far fa-calendar-alt"></i>${formatedDate}</li>
                     <li class="location-text"><i class="adress-icon fas fa-map-marker-alt"></i> ${launchpad[0].locality} - ${launchpad[0].region}</li>
                     <li class="location-text"><i class="rocket-icon fas fa-rocket"></i> ${rocket[0].name}</li>
                 </ul>
