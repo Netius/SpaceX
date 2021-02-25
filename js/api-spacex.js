@@ -59,7 +59,7 @@ function sortDateLaunches(array){
         return new Date (a.date_local) - new Date(b.date_local);
       });
 }
-// Format date and return
+// Format date and time and return
 function formatDate(date){
     var month = new Array();
         month[0] = "Jan";
@@ -76,9 +76,21 @@ function formatDate(date){
         month[11] = "Dec";
     
     const launchDate = new Date(date);
-    let formatedDate = launchDate.getUTCDate() + " " + 
+
+    let formatedHours = launchDate.getHours();
+    formatedHours = ("0" + formatedHours).slice(-2); 
+    // + ":" + launchDate.getMinutes();
+
+    let formatedMinutes = launchDate.getMinutes();
+    formatedMinutes = ("0" + formatedMinutes).slice(-2); 
+
+
+    let formatedDate = launchDate.getDate() + " " + 
                         month[launchDate.getMonth()] + ". " + 
-                        launchDate.getFullYear();
+                        launchDate.getFullYear() + " " + "<i class='far fa-clock time-icon'></i>" + " " +
+                        formatedHours + ":" + formatedMinutes; 
+   
+         
    return formatedDate;
 }
 // Format text breaking after point.

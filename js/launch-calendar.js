@@ -29,7 +29,7 @@ function createSpacexLaunches(spacex , launchpads, rockets) {
                         </span>
                         </h3>
                     </li>
-                    <li class="hero-date ${dateClass}"><i class="calendar-icon far fa-calendar-alt"></i>${formatedDate}</li>
+                    <li class="hero-date ${dateClass}"><i class="calendar-icon far fa-calendar"></i>${formatedDate}</li>
                     <li class="location-text"><i class="adress-icon fas fa-map-marker-alt"></i> ${launchpad[0].locality} - ${launchpad[0].region}</li>
                     <li class="location-text"><i class="rocket-icon fas fa-rocket"></i> ${rocket[0].name}</li>
                 </ul>
