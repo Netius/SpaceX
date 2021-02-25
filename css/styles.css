@@ -226,10 +226,11 @@ li > a:only-child:after {
     display: inline-block;
     color: #F2F2F2;
     font-size: 22px !important;
-    font-family: pt-sans-semibold, sans-serif;
+    font-family: pt-sans-regular, sans-serif;
 }
 .hero-date-upcoming{
-    background-color:#F28A2E;
+    /* background-color:#F28A2E; */
+    background-color: #DB5B1F;
     padding: 5px 5px 5px 0;
 }
 .hero-starship{
@@ -811,6 +812,10 @@ fieldset {
     float:right;
     margin-top: 10px;
     font-family: pt-sans-semibold, sans-serif;
+}
+.time-icon{
+    padding-left: 5px;
+    color:#F2F2F2 ;
 }
 
 /********************** MEDIE QUERIE ***********************************************/

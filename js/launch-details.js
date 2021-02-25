@@ -11,7 +11,7 @@ function createSpacexLaunches(launch ,launchpads, rockets){
     // Format text breaking after point.
     let rocketText = formatText(rocket[0].description);
     let launchPadDetails = formatText(launchpad[0].details);
-
+    console.log(launch);
     
     let dateClass="hero-date-upcoming";
     if(firstLaunch === "false"){
@@ -26,7 +26,7 @@ function createSpacexLaunches(launch ,launchpads, rockets){
                             <span class="location-text pd-left">#${launch.flight_number}
                             </span>
                         </h2>
-                        <p class="hero-date pd-bottom ${dateClass}"><i class="calendar-icon far fa-calendar-alt"></i>${formatedDate}</p>
+                        <p class="hero-date pd-bottom ${dateClass}"><i class="calendar-icon far fa-calendar"></i>${formatedDate}</p>
                         
                         <h2 class="spaceship-name"><i class="adress-icon fas fa-map-marker-alt"></i> ${launchpad[0].locality} - ${launchpad[0].region}</h2>
                         <p class="details-text pd-bottom">${launchPadDetails}</p>
