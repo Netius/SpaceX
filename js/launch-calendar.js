@@ -14,9 +14,6 @@ function createSpacexLaunches(spacex , launchpads, rockets) {
             const rocket = rockets.filter(element => element.id === launch.rocket);
             let formatedDate = formatDate(launch.date_local);
 
-            console.log(launch);
-
-            
              // Adding bg-color to date for the 3 firsts launches
              if(counter > 2){
                 dateClass = "";

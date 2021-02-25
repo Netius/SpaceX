@@ -15,6 +15,7 @@
                 const rocket = rockets.filter(element => element.id === launch.rocket);
                 let formatedDate = formatDate(launch.date_local);
 
+                console.log(launch.details);
                 // Remove bg-color to date after 3 firsts launches
                 if(counter > 2){
                     dateClass = "";

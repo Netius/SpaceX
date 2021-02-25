@@ -12,9 +12,6 @@ if(launchId){
     spacexUrl += launchId;
 }
 
-
-
-
 // Show loader when loading API or error
 const apiLoader = document.querySelectorAll(".loader-container");
 const apiError = document.querySelectorAll(".error-container");
@@ -87,6 +84,5 @@ function formatDate(date){
 // Format text breaking after point.
 function formatText(text){
     var formatedText = text.split('. ').join('. <br/>');
-    console.log(formatedText);
     return formatedText;
 }
