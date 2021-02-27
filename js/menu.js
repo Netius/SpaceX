@@ -11,3 +11,18 @@ function toogleMenuIcon(event){
     }
     toogleIcon = !toogleIcon;
 }
+
+// Function to show and hide to top button after 800px
+const topBtn = document.getElementById("topBtn");
+function scrollToTop() {
+  var scrollY = window.scrollY;
+  var screenHeight = screen.height;
+  //Show top button if user have scrolled 100vh
+  if (scrollY >= screenHeight ) {
+        topBtn.className = "top-button-show"
+  } else {
+        topBtn.className = "top-button-hide"
+  }
+};
+
+window.addEventListener("scroll", scrollToTop);

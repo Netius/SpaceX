@@ -812,6 +812,41 @@ fieldset {
     color:#F2F2F2 ;
 }
 
+#topBtn {
+    position: fixed;
+    width: 50px;
+    height: 50px;  
+    color: #F2F2F2;
+    background-color: rgba(13, 13, 13, .5);
+    border: 2px solid #F2F2F2;
+    bottom: 40px;
+    right: 5%;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: ptsansnarrow, serif;
+    border-radius: 40px;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+
+#topBtn:hover {
+    background-color: rgba(242, 242, 242, 1);
+    color: #0D0D0D;
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+}
+.top-button-show{
+    visibility: visible;
+}
+
+.top-button-hide{
+   visibility: hidden;
+}
+
+
+
 /********************** MEDIE QUERIE ***********************************************/
 @media (max-width: 1024px) {
     nav {
