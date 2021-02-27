@@ -13,11 +13,11 @@ function createSpacexLaunches(launch ,launchpads, rockets){
     let launchPadDetails = formatText(launchpad[0].details);
 
     // Some launches does not have any details
-    let launchDetails= "More details about this launch is coming soon!";
+    let launchDetails= `SpaceX-API did not provide more detail about launch ${launch.name}`;
     if(launch.details){
         launchDetails = formatText(launch.details);
     }
-    // Pu some yellow background on the closest 3 launches
+    // Put some yellow background on the closest 3 launches
     let dateClass="hero-date-upcoming";
     if(firstLaunch === "false"){
         dateClass = "";
@@ -33,7 +33,7 @@ function createSpacexLaunches(launch ,launchpads, rockets){
                             <span class="location-text pd-left">#${launch.flight_number}
                             </span>
                         </h2>
-                        <p class="hero-date" ${dateClass}"><i class="calendar-icon far fa-calendar"></i>${formatedDate}</p>
+                        <p class="hero-date ${dateClass}"><i class="calendar-icon far fa-calendar"></i>${formatedDate}</p>
                         <p class="pd-bottom">${launchDetails}<p>
                         
                         <h2 class="spaceship-name"><i class="adress-icon fas fa-map-marker-alt"></i> ${launchpad[0].locality} - ${launchpad[0].region}</h2>
