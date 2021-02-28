@@ -808,7 +808,7 @@ fieldset {
     color: #F2F2F2;
     background-color: rgba(13, 13, 13, .5);
     border: 2px solid #F2F2F2;
-    bottom: 40px;
+    bottom: 30%;
     right: 5%;
     text-align: center;
     line-height: 50px;
@@ -827,11 +827,11 @@ fieldset {
     -webkit-transform: scale(1.1);
 }
 .top-button-show{
-    visibility: visible;
+    display: visible;
 }
 
 .top-button-hide{
-   visibility: hidden;
+   display: none;
 }
 
 
