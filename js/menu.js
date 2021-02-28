@@ -17,6 +17,10 @@ const topBtn = document.getElementById("topBtn");
 function scrollToTop() {
   var scrollY = window.scrollY;
   var screenHeight = screen.height;
+  if(!screenHeight){
+        screenHeight = 800;
+  }    
+
   //Show top button if user have scrolled 100vh
   if (scrollY >= screenHeight ) {
         topBtn.className = "top-button-show"

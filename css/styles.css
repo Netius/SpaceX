@@ -827,7 +827,7 @@ fieldset {
     -webkit-transform: scale(1.1);
 }
 .top-button-show{
-    display: visible;
+    display: initial;
 }
 
 .top-button-hide{
