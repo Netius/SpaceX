@@ -29,8 +29,8 @@
                                 </span></h2>
                                 <p class="hero-date ${dateClass}"><i class="calendar-icon far fa-calendar"></i>${formatedDate}</p>
                                 <div>
-                                    <a class="btn-standard" title="Learn more about ${launch.name} launch" href="upcoming.html?id=${launch.id}&first=${upcoming}">
-                                        Learn more
+                                    <a class="btn-standard" title="More details about ${launch.name} launch" href="upcoming.html?id=${launch.id}&first=${upcoming}">
+                                        More details
                                     </a>
                                 </div>
                     `;
@@ -38,7 +38,7 @@
                 }
 
                 detailHtml += `
-                <div class="launches-container" title="Learn more about ${launch.name} launch" onclick="window.location='upcoming.html?id=${launch.id}&first=${upcoming}'">
+                <div class="launches-container" title="More details about ${launch.name} launch" onclick="window.location='upcoming.html?id=${launch.id}&first=${upcoming}'">
                     <ul>
                         <li class="spaceship-name">
                             <h3>${launch.name}
@@ -51,8 +51,8 @@
                         <li class="location-text"><i class="adress-icon fas fa-map-marker-alt"></i> ${launchpad[0].locality} - ${launchpad[0].region}</li>
                         <li class="location-text"><i class="rocket-icon fas fa-rocket"></i> ${rocket[0].name}</li>
                     </ul>
-                    <a  class="btn-details" title="Learn more about ${launch.name} launch" href="upcoming.html?id=${launch.id}&first=${upcoming}">
-                        Learn more
+                    <a  class="btn-details" title="More details about ${launch.name} launch" href="upcoming.html?id=${launch.id}&first=${upcoming}">
+                        More details
                     </a>
                 </div>
                  `;

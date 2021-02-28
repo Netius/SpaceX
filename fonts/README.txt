@@ -40,7 +40,7 @@ Get started
 2. Use your app's font picker to view the font family and all the
 available styles
 
-Learn more about variable fonts
+More details about variable fonts
 -------------------------------
 
   https://developers.google.com/web/fundamentals/design-and-ux/typography/variable-fonts
