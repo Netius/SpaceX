@@ -22,7 +22,6 @@ function createSpacexLaunches(launch ,launchpads, rockets){
     if(firstLaunch === "false"){
         dateClass = "";
     }
-    // console.log(rocket[0].flickr_images.length);
     let randomImage = randomRocketImage( 1, rocket[0].flickr_images.length); 
 
     let detailHtml= "";
