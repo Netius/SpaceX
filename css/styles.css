@@ -808,7 +808,7 @@ fieldset {
     color: #F2F2F2;
     background-color: rgba(13, 13, 13, .5);
     border: 2px solid #F2F2F2;
-    bottom: 30%;
+    bottom: 50%;
     right: 5%;
     text-align: center;
     line-height: 50px;
@@ -1005,7 +1005,7 @@ fieldset {
     }
     .hero-text{
         margin: 1em 1em 2em 1em;
-        bottom: 225px;
+        bottom: 150px;
     }
     .main-hero-image{
         background-position: top right 30%;
@@ -1052,4 +1052,11 @@ fieldset {
         margin: auto 1em;
     }
 
+    #topBtn {
+        width: 40px;
+        height: 40px;  
+        bottom: 25%;
+        right: 10px;
+        line-height: 40px;
+    }
  }
