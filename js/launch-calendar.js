@@ -33,8 +33,8 @@ function createSpacexLaunches(spacex , launchpads, rockets) {
                     <li class="location-text"><i class="adress-icon fas fa-map-marker-alt"></i> ${launchpad[0].locality} - ${launchpad[0].region}</li>
                     <li class="location-text"><i class="rocket-icon fas fa-rocket"></i> ${rocket[0].name}</li>
                 </ul>
-                <a  class="btn-standard" title="Read more about ${launch.name} launch" href="upcoming.html?id=${launch.id}&first=${upcoming}">
-                    Read more
+                <a  class="btn-standard" title="Learn more about ${launch.name} launch" href="upcoming.html?id=${launch.id}&first=${upcoming}">
+                    Learn more
                 </a>
             </div>
              `;
