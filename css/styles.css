@@ -107,11 +107,14 @@ nav {
     min-width: 320px;  */
 }
 
-#logo {
+.logo {
     width: 250px;
     position: absolute;
     top: 15px;
     left: 10px;
+}
+.logo-thanks{
+    width: 250px;
 }
 
 nav:after {
@@ -913,7 +916,7 @@ fieldset {
         border-radius: 0;
     }
 
-    #logo {
+    .logo {
         top: 17px;
         left: 15px;
         width: 200px;
